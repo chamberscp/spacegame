@@ -1,2 +1,39 @@
-this will be user requiremnets
-#this is a test from Brandon
+Space Game User Requirements
+
+GOAL
+    - Minimum viable product for demo
+    - Space exploration Game
+    - gather resources
+    - compelling story
+    - multi-ending
+        - good ending
+        - bad endings
+            - Age !> 65
+            - Fuel
+            - Poor ending
+    - Minimum of 5 planets
+        - Alpha Centari
+        - Alpha Proxima
+    - text based (MUD style?)
+    - Must use provided Warp formula
+
+
+STRETCH GOALS
+    - Resource rarity
+    - Random planets
+    - Random NPC/ planet economies
+    - Character Stats
+        - Excaped Prisoner ()
+        - Mechanic (+5 ship)
+        - Bounty Hunter
+        - Scavenger (+3 Resources, +2 Luck)
+    - Coop teammate play
+    - Audio
+    - GUI/ Photos/ Animations
+    - Save and Restore
+    - Ship upgrades/ type of ships 
+        - Speed
+        - Warp distance
+
+
+    
