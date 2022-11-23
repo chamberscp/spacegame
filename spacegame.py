@@ -70,6 +70,64 @@ user_name = []
 BLUE = (0,0,255)
 WHITE = (255, 255, 255)
 
+#player class and related get/set defs
+class Player:
+    def __init__(self):
+        self.name = ''
+        self.money = 0
+        self.wallet = 0
+        self.planet = 0
+        self.planetSize = 5 
+        self.fuel = 0
+        self.age = 20
+        self.location = [0,0]
+        self.game_over = False
+
+
+    def getLocation(self):
+        return self.location
+
+    def addMoney(self, amt):
+        self.wallet += amt
+
+    def takeMoney(self, amt):
+        if amt > self.wallet:
+           return False
+        else:
+            self.wallet -= amt
+            return True
+
+    def addFuel(self, amt):
+        self.fuel += amt
+
+    def burnFuel(self, amt):
+        self.fuel -= amt
+
+    def setName(self, n):
+        self.name = n
+    
+    def setPlanet(self, p):
+        self.planet = p
+    
+
+# getters 
+    def getLocation(self):
+        return self.location
+
+    def getMoney(self):
+        return self.money
+
+    def getName(self):
+        return self.name
+
+    def getPlanet(self):
+        return self.planet
+    
+    def getFuel(self):
+        return self.fuel
+
+player = Player()
+
 def create_text(text, font_size, text_rgb, bg_rgb):
     font = pygame.freetype.SysFont("Courier", font_size, bold=True)
     surface, _= font.render(text=text, fgcolor=text_rgb, bgcolor=bg_rgb)
