@@ -26,7 +26,7 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.image.load('player.png').convert()
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
-        self.rect.center = (1000, 650)
+        self.rect.center = (1800, 350)
     
     def update(self):
         global DAY_AGE
@@ -76,8 +76,8 @@ class City(pygame.sprite.Sprite):
         self.image = pygame.image.load('city1.png').convert()
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
-        self.rect.x = random.randrange(WIDTH - self.rect.width)
-        self.rect.y = random.randrange(HEIGHT - self.rect.height)
+        self.rect.x = 1800
+        self.rect.y = 200
         
 def cityPrompt():
     print("Welcome to the city.  Before you is a sprawling metropolis...")
@@ -124,8 +124,8 @@ class Cave(pygame.sprite.Sprite):
         self.image = pygame.image.load('cave.png').convert()
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
-        self.rect.x = random.randrange(WIDTH - self.rect.width)
-        self.rect.y = random.randrange(HEIGHT - self.rect.height)       
+        self.rect.x = 200
+        self.rect.y = 1000       
 
 class Quarry(pygame.sprite.Sprite):
     def __init__(self):
@@ -133,8 +133,8 @@ class Quarry(pygame.sprite.Sprite):
         self.image = pygame.image.load('diamond.png').convert()
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
-        self.rect.x = random.randrange(WIDTH - self.rect.width)
-        self.rect.y = random.randrange(HEIGHT - self.rect.height)
+        self.rect.x = 400
+        self.rect.y = 400
        
 class Spaceport(pygame.sprite.Sprite):
     
@@ -143,8 +143,8 @@ class Spaceport(pygame.sprite.Sprite):
         self.image = pygame.image.load('spacestation.png').convert()
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
-        self.rect.x = random.randrange(WIDTH - self.rect.width)
-        self.rect.y = random.randrange(HEIGHT - self.rect.height)    
+        self.rect.x = 1500
+        self.rect.y = 950   
        
 def collision_detection():
     cityhit = pygame.sprite.spritecollide(player, citygroup, False)
