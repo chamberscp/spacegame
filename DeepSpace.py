@@ -83,12 +83,34 @@ def cityPrompt():
     print("Welcome to the city.  Before you is a sprawling metropolis...")
         
 def spaceportPrompt():
-    print('You have arrived at the planetary spaceport.  You can')
-    print('(1) Upgarade your ship')
-    print('(2) Buy Fuel')
-    print('(3) Travel to another System')
-    print('(4) Leave')
+    print('#############################')
+    print('You arrive at the last spaceport on earth, your only way off your dying homeworld....')
     print('What would you like to do?')
+    print('buy_fuel')
+    print('leave')
+    print('help')
+    print('#############################')
+    #spacePortOptions()
+
+
+# def spacePortOptions():
+#    option = input("> ")
+#    if option.lower() == ("buy_fuel"):
+#        #buy_fuel() #def to be created later
+#    elif option.lower() == ("help"):
+#        #help_menu() 
+#    elif option.lower == ("leave"):
+#        sys.exit()
+#    while option.lower() not in ['buy_fuel', 'help', 'leave']:
+#        print("Please enter a listed command")
+#        option = input("> ")
+#        if option.lower() == ("buy_fuel"):
+#            #buy_fuel() #def to be created later
+#        elif option.lower() == ("help"):
+#            help_menu()
+#        elif option.lower() == ("leave"):
+#            #back_1_menu() #def to be created later
+
     
 def cavePrompt():
     print("You have wandered upon an eery looking cave.  Just inside the entrance, you can see blood and bones.")
