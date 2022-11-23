@@ -1,61 +1,3 @@
-'''import  pygame
-from    pygame.locals   import *
-from    pygame          import mixer
-from    pyfiglet        import Figlet
-
-# Global variables
-user_name = []
-
-#pygame setup
-pygame.init()
-width = 2000
-height = 2000
-window = pygame.display.set_mode((width,height))
-bg_img = pygame.image.load('space.png')
-bg_img = pygame.transform.scale(bg_img,(width,height))
-
-mixer.init()
-mixer.music.load('desolateworld.ogg')
-mixer.music.play()
-
-pygame.display.set_caption('SPACE GAME')
-
-running = True
-while running:
-    window.blit(bg_img,(0,0))
-    for event in pygame.event.get():
-        if event.type == quit:
-            running = False
-    pygame.display.update()
-pygame.quit()
-
-
-#Figlet displays the  in "big" wordart format
-f = Figlet(font='slant')
-print(f.renderText('SPACE GAME'))
-
-# Adds user to list
-def addUser():
-    global user_name
-    user_name = []
-    list_length = 1
-    for i in range(list_length):
-        user = input('Welcome weary traveler.  What is your name? ')
-        user_name.append(user)
-    
-
-# Introduction Section
-def getIntro():
-    mystr = ', you find yourself looking into the stars...insert rest of starting backstory. What would you like to do?'
-    result = user_name[0] + mystr
-    print(result)
- 
- 
- # Main
-if __name__ == "__main__":
-    addUser()
-    getIntro()'''
- 
 from    enum            import Enum     
 import  pygame
 import  pygame.freetype
@@ -82,7 +24,6 @@ class Player:
         self.age = 20
         self.location = [0,0]
         self.game_over = False
-
 
     def getLocation(self):
         return self.location
@@ -176,10 +117,9 @@ class UIElement(Sprite):
 def main():
     pygame.mixer.pre_init()
     pygame.init()
-    screen = pygame.display.set_mode((2000,2000))
+    screen = pygame.display.set_mode((1000,1000))
     window = pygame.display.set_caption('SPACE GAME')
-    bg_img = pygame.image.load('space.png')
-    bg_img = pygame.transform.scale(bg_img,(2000,2000))
+    
     game_state = gameState.TITLE
     
     while True:
@@ -195,32 +135,40 @@ def main():
 
 def title_screen(screen):
     title_btn = UIElement(
-        center_pos=(1000, 300),
-        font_size=100,
+        center_pos=(500, 300),
+        font_size=60,
         bg_rgb=BLUE,
         text_rgb=WHITE,
-        text="SPACE GAME",
+        text="Spaceport",
         action=gameState.TITLE,
     )
     
     start_btn = UIElement(
-        center_pos=(1000, 700),
+        center_pos=(500, 500),
         font_size=30,
         bg_rgb=BLUE,
         text_rgb=WHITE,
-        text="Start",
+        text="Buy fuel",
         action=gameState.NEWGAME,
     )
     quit_btn = UIElement(
-        center_pos=(1000, 800),
+        center_pos=(500, 800),
         font_size=30,
         bg_rgb=BLUE,
         text_rgb=WHITE,
-        text="Quit",
+        text="Travel to new planet",
         action=gameState.QUIT,
     )
+    travel_sys_btn = UIElement(
+        center_pos=(500, 650),
+        font_size=30,
+        bg_rgb=BLUE,
+        text_rgb=WHITE,
+        text="Travel to new star system",
+        action=gameState.TITLE,
+    )
 
-    buttons = [title_btn, start_btn, quit_btn]
+    buttons = [title_btn, start_btn, quit_btn, travel_sys_btn]
     
     while True:
         mouse_up = False
@@ -239,7 +187,7 @@ def title_screen(screen):
         
 def play(screen):
     return_btn = UIElement(
-        center_position=(140, 570),
+        center_pos=(140, 570),
         font_size=20,
         bg_rgb=BLUE,
         text_rgb=WHITE,
