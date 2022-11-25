@@ -8,7 +8,7 @@ class Game():
         
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGTH))
-        pygame.display.set_caption('DEEP SPCAE II')
+        pygame.display.set_caption('DEEP SPACE II')
         self.clock = pygame.time.Clock()
         
         self.level = Level()
