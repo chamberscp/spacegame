@@ -1,13 +1,18 @@
 import  pygame
-import  math
-import  random
+import tkinter as tk
 from    pygame.locals   import *
 from    pygame          import mixer
 
-WIDTH = 2000
-HEIGHT = 1300
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 800
+BOTTOM_MARGIN = 200
+RSIDE_MARGIN = 300
 BLACK = (0,0,0)
 FPS = 60
+
+ROWS = 20
+COLUMNS = 40
+
 START_AGE = 20
 DAY_AGE = 7300
 CURRENT_AGE = DAY_AGE / 365
@@ -16,7 +21,7 @@ MAX_DAY_AGE = 23725
 
 
 pygame.init()
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
+screen = pygame.display.set_mode((SCREEN_WIDTH + RSIDE_MARGIN, SCREEN_HEIGHT + BOTTOM_MARGIN))
 pygame.display.set_caption('DEEP SPACE')
 clock = pygame.time.Clock()
 
@@ -26,7 +31,7 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.image.load('player.png').convert()
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
-        self.rect.center = (1800, 350)
+        self.rect.center = (600, 500)
     
     def update(self):
         global DAY_AGE
@@ -59,14 +64,14 @@ class Player(pygame.sprite.Sprite):
         self.rect.y += self.speedy
                  
         #Map Constrainment        
-        if self.rect.right > WIDTH:
-            self.rect.right = WIDTH
+        if self.rect.right > SCREEN_WIDTH:
+            self.rect.right = SCREEN_WIDTH
         if self.rect.left < 0:
             self.rect.left = 0    
         if self.rect.top < 0:
             self.rect.top = 0         
-        if self.rect.bottom > HEIGHT:
-            self.rect.bottom = HEIGHT 
+        if self.rect.bottom > SCREEN_HEIGHT:
+            self.rect.bottom = SCREEN_HEIGHT 
                    
 class City(pygame.sprite.Sprite):
     def __init__(self):
@@ -74,7 +79,7 @@ class City(pygame.sprite.Sprite):
         self.image = pygame.image.load('city1.png').convert()
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
-        self.rect.x = 1800
+        self.rect.x = 800
         self.rect.y = 200
         
 def cityPrompt():
@@ -87,8 +92,8 @@ class Spaceport(pygame.sprite.Sprite):
         self.image = pygame.image.load('spacestation.png').convert()
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
-        self.rect.x = 1500
-        self.rect.y = 950  
+        self.rect.x = 200
+        self.rect.y = 200 
         
 def spaceportPrompt():
     print('#############################')
@@ -128,7 +133,7 @@ class Cave(pygame.sprite.Sprite):
         self.image.set_colorkey(BLACK)
         self.rect =  self.image.get_rect()
         self.rect.x = 200
-        self.rect.y = 1000       
+        self.rect.y = 750 
 
 def cavePrompt():
     print("You have wandered upon an eery looking cave.  Just inside the entrance, you can see blood and bones.")
