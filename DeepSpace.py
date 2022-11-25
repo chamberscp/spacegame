@@ -67,9 +67,7 @@ class Player(pygame.sprite.Sprite):
             self.rect.top = 0         
         if self.rect.bottom > HEIGHT:
             self.rect.bottom = HEIGHT 
-            
-    
-        
+                   
 class City(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -81,6 +79,16 @@ class City(pygame.sprite.Sprite):
         
 def cityPrompt():
     print("Welcome to the city.  Before you is a sprawling metropolis...")
+  
+class Spaceport(pygame.sprite.Sprite):
+    
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load('spacestation.png').convert()
+        self.image.set_colorkey(BLACK)
+        self.rect =  self.image.get_rect()
+        self.rect.x = 1500
+        self.rect.y = 950  
         
 def spaceportPrompt():
     print('#############################')
@@ -91,30 +99,25 @@ def spaceportPrompt():
     print('help')
     print('#############################')
     #spacePortOptions()
+    # def spacePortOptions():
+    #    option = input("> ")
+    #    if option.lower() == ("buy_fuel"):
+    #       buy_fuel() #def to be created later
+    #    elif option.lower() == ("help"):
+    #        #help_menu() 
+    #    elif option.lower == ("leave"):
+    #        sys.exit()
+    #    while option.lower() not in ['buy_fuel', 'help', 'leave']:
+    #        print("Please enter a listed command")
+    #        option = input("> ")
+    #        if option.lower() == ("buy_fuel"):
+    #            #buy_fuel() #def to be created later
+    #        elif option.lower() == ("help"):
+    #            help_menu()
+    #        elif option.lower() == ("leave"):
+    #            #back_1_menu() #def to be created later
 
-
-# def spacePortOptions():
-#    option = input("> ")
-#    if option.lower() == ("buy_fuel"):
-#        #buy_fuel() #def to be created later
-#    elif option.lower() == ("help"):
-#        #help_menu() 
-#    elif option.lower == ("leave"):
-#        sys.exit()
-#    while option.lower() not in ['buy_fuel', 'help', 'leave']:
-#        print("Please enter a listed command")
-#        option = input("> ")
-#        if option.lower() == ("buy_fuel"):
-#            #buy_fuel() #def to be created later
-#        elif option.lower() == ("help"):
-#            help_menu()
-#        elif option.lower() == ("leave"):
-#            #back_1_menu() #def to be created later
-
-    
-def cavePrompt():
-    print("You have wandered upon an eery looking cave.  Just inside the entrance, you can see blood and bones.")
-    
+        
 def quarryPrompt():
     print("You have made your way to the quarry.  It appears to be an old diamond mine.  The local guide offers to let you mine for a week for $100 credits.")
  
@@ -127,6 +130,9 @@ class Cave(pygame.sprite.Sprite):
         self.rect.x = 200
         self.rect.y = 1000       
 
+def cavePrompt():
+    print("You have wandered upon an eery looking cave.  Just inside the entrance, you can see blood and bones.")
+
 class Quarry(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -136,15 +142,8 @@ class Quarry(pygame.sprite.Sprite):
         self.rect.x = 400
         self.rect.y = 400
        
-class Spaceport(pygame.sprite.Sprite):
-    
-    def __init__(self):
-        pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load('spacestation.png').convert()
-        self.image.set_colorkey(BLACK)
-        self.rect =  self.image.get_rect()
-        self.rect.x = 1500
-        self.rect.y = 950   
+def quarryPrompt():
+    print("You have made your way to the quarry.  It appears to be an old diamond mine.  The local guide offers to let you mine for a week for $100 credits.")
        
 def collision_detection():
     cityhit = pygame.sprite.spritecollide(player, citygroup, False)
