@@ -26,7 +26,7 @@ class Level():
                     Tile((x,y),[self.visible_sprites, self.obstacle_sprites])
                 if column == 'p':
                     self.player = Player((x,y),[self.visible_sprites], self.obstacle_sprites)'''
-        self.player = Player((800,400),[self.visible_sprites], self.obstacle_sprites)    
+        self.player = Player((350,350),[self.visible_sprites], self.obstacle_sprites)    
     
     def run(self):
         #update and run the game
