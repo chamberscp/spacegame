@@ -31,6 +31,68 @@ if __name__ == '__main__':
     game = Game()
     game.run()
 
+#player class and related get/set funtions
+class Player:
+    def __init__(self):
+        self.name = ''
+        self.money = 0
+        self.planet = 0
+        self.fuel = 0
+        self.age = 20
+        self.game_over_age = False
+
+    def game_over_age(): True
+    print("Though you tried your best and put countless years into this journey, at long last you have succumb \n \
+         and die peacefully of old age as you lay asleep in your bed")
+    # maybe just pass sys.exit and close game?
+
+
+    def getLocation(self):
+        return self.location
+
+    def addMoney(self, amt):
+        self.wallet += amt
+
+    def takeMoney(self, amt):
+        if amt > self.wallet:
+           return False
+        else:
+            self.wallet -= amt
+            return True
+
+    def addFuel(self, amt):
+        self.fuel += amt
+
+    def burnFuel(self, amt):
+        self.fuel -= amt
+
+    def setName(self, n):
+        self.name = n
+    
+    def setPlanet(self, p):
+        self.planet = p
+    
+
+# getters 
+    def getLocation(self):
+        return self.location
+
+    def getMoney(self):
+        return self.money
+
+    def getName(self):
+        return self.name
+
+    def getPlanet(self):
+        return self.planet
+    
+    def getFuel(self):
+        return self.fuel
+
+player = Player()
+
+
+
 
 ##### story promts #####
 
@@ -38,6 +100,8 @@ def buy_fuel(): pass
 def ReturntoMap(): pass
 def leavePlanet(): pass
 def help_menu(): pass
+def mine(): pass
+def loot(): pass
 
 def startgameprompt():
     print('#############################')
@@ -61,30 +125,30 @@ def cityPrompt():
     print('Back to planet map')
     print('help')
     print('#############################')
-    #CityOptions() #to be defined later
-    # def CityOptions():
-    #    option = input("> ")
-    #    if option.lower() == ("buy_fuel"):
-    #       buy_fuel() #def to be created later
-    #    elif option.lower() == ("help"):
-    #        #help_menu() 
-    #    elif option.lower == ("back"):
-    #        #ReturntoMap() *to be defined later
-    #    while option.lower() not in ['buy_fuel', 'help', 'back']:
-    #        print("Please enter a listed command")
-    #        option = input("> ")
-    #        if option.lower() == ("buy_fuel"):
-    #            #buy_fuel() #def to be created later
-    #        elif option.lower() == ("help"):
-    #            help_menu()
-    #        elif option.lower() == ("back"):
-    #            #ReturntoMap() *to be defined later
+    CityOptions() #to be defined later
+    def CityOptions():
+        option = input("> ")
+        if option.lower() == ("buy_fuel"):
+           buy_fuel() #def to be created later
+        elif option.lower() == ("help"):
+            help_menu() 
+        elif option.lower == ("back"):
+             ReturntoMap() #to be defined later
+        while option.lower() not in ['buy_fuel', 'help', 'back']:
+            print("Please enter a listed command")
+            option = input("> ")
+            if option.lower() == ("buy_fuel"):
+                buy_fuel() #def to be created later
+            elif option.lower() == ("help"):
+                help_menu()
+            elif option.lower() == ("back"):
+                ReturntoMap() #to be defined later
 
 
 
 def spaceportPrompts():
     print('#############################')
-    print('You arrive at the last spaceport on earth, your only way off your dying homeworld....')
+    print('You arrive at the last spaceport "Angel gate" on earth, your only way off your dying homeworld....')
     print('What would you like to do?')
     print('buy_fuel')
     print('leave the planet')
@@ -101,7 +165,16 @@ def spaceportPrompts():
         elif option.lower() == ("back"):
             ReturntoMap() #to be defined later
         elif option.lower == ("Leave"):
+<<<<<<< Updated upstream
                 leavePlanet(): #to be defined later 
+=======
+<<<<<<< HEAD
+              leavePlanet()
+              #to be defined later 
+=======
+                leavePlanet(): #to be defined later 
+>>>>>>> e229973bc4f2a9a0e43c70e4d61c6614378b834f
+>>>>>>> Stashed changes
         while option.lower() not in ['buy_fuel', 'help', 'leave']:
             print("Please enter a listed command")
             option = input("> ")
@@ -110,7 +183,15 @@ def spaceportPrompts():
         elif option.lower() == ("help"):
              help_menu()
         elif option.lower() == ("leave"):
+<<<<<<< Updated upstream
                 leavePlanet(): #to be defined later pass'''
+=======
+<<<<<<< HEAD
+                leavePlanet() #to be defined later pass
+=======
+                leavePlanet(): #to be defined later pass'''
+>>>>>>> e229973bc4f2a9a0e43c70e4d61c6614378b834f
+>>>>>>> Stashed changes
 
 
 
@@ -124,27 +205,54 @@ def quarryPrompt():
     print('Back to planet map')
     print('help')
     print('#############################')
-    #quarryOptions()
-    # def QuarryOptions():
-    #    option = input("> ")
-    #    if option.lower() == ("Mine"):
-    #       Mine() #def to be created later
-    #    elif option.lower() == ("help"):
-    #        #help_menu() 
-    #    elif option.lower == ("leave"):
-    #        sys.exit()
-    #    while option.lower() not in ['Mine', 'help', 'leave']:
-    #        print("Please enter a listed command")
-    #        option = input("> ")
-    #        if option.lower() == ("Mine"):
-    #            #Mine() #def to be created later
-    #        elif option.lower() == ("help"):
-    #            help_menu()
-    #        elif option.lower() == ("leave"):
-    #            #back_1_menu() #def to be created later
+    QuarryOptions()
+    def QuarryOptions():
+        option = input("> ")
+        if option.lower() == ("Mine"):
+           mine() #def to be created later
+        elif option.lower() == ("help"):
+            help_menu() 
+        elif option.lower == ("back"):
+            ReturntoMap()
+        while option.lower() not in ['Mine', 'help', 'leave']:
+            print("Please enter a listed command")
+            option = input("> ")
+            if option.lower() == ("Mine"):
+                mine() #def to be created later
+            elif option.lower() == ("help"):
+                help_menu() 
+            elif option.lower() == ("back"):
+                ReturntoMap()
     
     
 
 
 def cavePrompt():
-    print("You have wandered upon an eery looking cave.  Just inside the entrance, you can see blood and bones.")
+    print('#############################')
+    print("You have wandered upon an eery looking cave.  Just inside the entrance, \n \
+        you can see dried blood and the bones of those who tried to hide from the devastation,\n \
+        tough grizzly, you think to yourself, surely there must be credits or valuables you can loot to buy fuel in there....")
+    print('#############################')
+    print('What would you like to do?')
+    print('Mine reserouces  *list credit gather rate / age conversion rate')
+    print('Back to planet map')
+    print('help')
+    print('#############################')
+    CaveOptions()
+    def CaveOptions():
+        option = input("> ")
+        if option.lower() == ("loot"):
+           mine() #def to be created later
+        elif option.lower() == ("help"):
+            help_menu() 
+        elif option.lower == ("back"):
+            ReturntoMap()
+        while option.lower() not in ['loot', 'help', 'back']:
+            print("Please enter a listed command")
+            option = input("> ")
+            if option.lower() == ("loot"):
+                loot() #def to be created later
+            elif option.lower() == ("help"):
+                help_menu() 
+            elif option.lower() == ("back"):
+                ReturntoMap()
