@@ -44,7 +44,7 @@ class YSortCameraGroup(pygame.sprite.Group):
         self.half_height = self.display_surface.get_size()[1] // 2
         self.offset = pygame.math.Vector2()
         
-        self.floor_surf = pygame.image.load('../images/ground.png').convert()
+        self.floor_surf = pygame.image.load('../images/newearth.png').convert()
         self.floor_rect = self.floor_surf.get_rect(topleft =(0,0))
     
     def custom_draw(self, player):

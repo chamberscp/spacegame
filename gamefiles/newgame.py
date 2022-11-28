@@ -1,6 +1,6 @@
 import pygame
 import sys
-from pytmx.util_pygame import load_pygame
+
 from settings import *
 from level import Level
 
@@ -10,8 +10,7 @@ class Game():
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGTH))
         pygame.display.set_caption('DEEP SPACE II')
-        tmx_data = load_pygame('../images/earthmap.tmx')
-        print(dir(tmx_data))
+       
         self.clock = pygame.time.Clock()
         
         self.level = Level()
@@ -92,7 +91,7 @@ def spaceportPrompts():
     print('Back to planet map')
     print('help')
     print('#############################')
-    spacePortOptions()
+    '''spacePortOptions()
     def spacePortOptions():
         option = input("> ")
         if option.lower() == ("buy_fuel"):
@@ -102,7 +101,7 @@ def spaceportPrompts():
         elif option.lower() == ("back"):
             ReturntoMap() #to be defined later
         elif option.lower == ("Leave"):
-              leavePlanet(): #to be defined later 
+                leavePlanet(): #to be defined later 
         while option.lower() not in ['buy_fuel', 'help', 'leave']:
             print("Please enter a listed command")
             option = input("> ")
@@ -111,7 +110,7 @@ def spaceportPrompts():
         elif option.lower() == ("help"):
              help_menu()
         elif option.lower() == ("leave"):
-                leavePlanet(): #to be defined later pass
+                leavePlanet(): #to be defined later pass'''
 
 
 
