@@ -147,8 +147,7 @@ class Quarry(pygame.sprite.Sprite):
         self.rect.x = 400
         self.rect.y = 400
        
-def quarryPrompt():
-    print("You have made your way to the quarry.  It appears to be an old diamond mine.  The local guide offers to let you mine for a week for $100 credits.")
+
        
 def collision_detection():
     cityhit = pygame.sprite.spritecollide(player, citygroup, False)
