@@ -155,7 +155,7 @@ def spaceportPrompts():
     print('Back to planet map')
     print('help')
     print('#############################')
-    '''spacePortOptions()
+    spacePortOptions()
     def spacePortOptions():
         option = input("> ")
         if option.lower() == ("buy_fuel"):
@@ -165,16 +165,7 @@ def spaceportPrompts():
         elif option.lower() == ("back"):
             ReturntoMap() #to be defined later
         elif option.lower == ("Leave"):
-<<<<<<< Updated upstream
-                leavePlanet(): #to be defined later 
-=======
-<<<<<<< HEAD
-              leavePlanet()
-              #to be defined later 
-=======
-                leavePlanet(): #to be defined later 
->>>>>>> e229973bc4f2a9a0e43c70e4d61c6614378b834f
->>>>>>> Stashed changes
+                leavePlanet() #to be defined later 
         while option.lower() not in ['buy_fuel', 'help', 'leave']:
             print("Please enter a listed command")
             option = input("> ")
@@ -183,15 +174,8 @@ def spaceportPrompts():
         elif option.lower() == ("help"):
              help_menu()
         elif option.lower() == ("leave"):
-<<<<<<< Updated upstream
-                leavePlanet(): #to be defined later pass'''
-=======
-<<<<<<< HEAD
-                leavePlanet() #to be defined later pass
-=======
-                leavePlanet(): #to be defined later pass'''
->>>>>>> e229973bc4f2a9a0e43c70e4d61c6614378b834f
->>>>>>> Stashed changes
+             ReturntoMap() #to be defined later
+
 
 
 
