@@ -45,19 +45,28 @@ def startgameprompt():
     print('# with Earth and the entire Sol system devastated and near lifeless, you realize you must do whatever it takes to escape the the cradle of humanity, and reach the promised safety of New Eden')
     print('# *display current stats: age, fuel, money*') #to be shown via funtion later
     print('# your mission: ') #mission statement here
-
+    print('#############################')
 
 
 
 def cityPrompt():
-    print("Welcome to the city.  Before you is a sprawling metropolis...")
+    print('#############################')
+    print('Welcome to the city.  Before you lies Bastion, the last remaining human city on Earth....')
+    print('What would you like to do?')
+    print('buy_fuel')
+    print('leave')
+    print('Back to planet map')
+    print('help')
+    print('#############################')
+    #earthCityOptions() #to be defined later
 
 def spaceportPrompts():
     print('#############################')
     print('You arrive at the last spaceport on earth, your only way off your dying homeworld....')
     print('What would you like to do?')
     print('buy_fuel')
-    print('leave')
+    print('leave the planet')
+    print('Back to planet map')
     print('help')
     print('#############################')
     #spacePortOptions()
@@ -80,7 +89,15 @@ def spaceportPrompts():
     #            #back_1_menu() #def to be created later
 
 def quarryPrompt():
-    print("You have made your way to the quarry.  It appears to be an old diamond mine.  The local guide offers to let you mine for a week for $100 credits.")
+    print('#############################')
+    print("You have made your way to the quarry.  It appears to be an old dilithium mine.  The local guide offers to let you mine for a week for $100 credits.")
+    print('What would you like to do?')
+    print('Mine reserouces  *list resrouce / age conversion rate')
+    print('Back to planet map')
+    print('help')
+    print('#############################')
+    
+
 
 def cavePrompt():
     print("You have wandered upon an eery looking cave.  Just inside the entrance, you can see blood and bones.")
