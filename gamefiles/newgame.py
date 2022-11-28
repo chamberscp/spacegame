@@ -35,6 +35,11 @@ if __name__ == '__main__':
 
 ##### story promts #####
 
+def buy_fuel(): pass
+def ReturntoMap(): pass
+def leavePlanet(): pass
+def help_menu(): pass
+
 def startgameprompt():
     print('#############################')
     print('# You awake from your cryo-pod, doing your best to shrug off the overwelming disorientation it leaves you with ')
@@ -54,11 +59,29 @@ def cityPrompt():
     print('Welcome to the city.  Before you lies Bastion, the last remaining human city on Earth....')
     print('What would you like to do?')
     print('buy_fuel')
-    print('leave')
     print('Back to planet map')
     print('help')
     print('#############################')
-    #earthCityOptions() #to be defined later
+    #CityOptions() #to be defined later
+    # def CityOptions():
+    #    option = input("> ")
+    #    if option.lower() == ("buy_fuel"):
+    #       buy_fuel() #def to be created later
+    #    elif option.lower() == ("help"):
+    #        #help_menu() 
+    #    elif option.lower == ("back"):
+    #        #ReturntoMap() *to be defined later
+    #    while option.lower() not in ['buy_fuel', 'help', 'back']:
+    #        print("Please enter a listed command")
+    #        option = input("> ")
+    #        if option.lower() == ("buy_fuel"):
+    #            #buy_fuel() #def to be created later
+    #        elif option.lower() == ("help"):
+    #            help_menu()
+    #        elif option.lower() == ("back"):
+    #            #ReturntoMap() *to be defined later
+
+
 
 def spaceportPrompts():
     print('#############################')
@@ -69,24 +92,30 @@ def spaceportPrompts():
     print('Back to planet map')
     print('help')
     print('#############################')
-    #spacePortOptions()
-    # def spacePortOptions():
-    #    option = input("> ")
-    #    if option.lower() == ("buy_fuel"):
-    #       buy_fuel() #def to be created later
-    #    elif option.lower() == ("help"):
-    #        #help_menu() 
-    #    elif option.lower == ("leave"):
-    #        sys.exit()
-    #    while option.lower() not in ['buy_fuel', 'help', 'leave']:
-    #        print("Please enter a listed command")
-    #        option = input("> ")
-    #        if option.lower() == ("buy_fuel"):
-    #            #buy_fuel() #def to be created later
-    #        elif option.lower() == ("help"):
-    #            help_menu()
-    #        elif option.lower() == ("leave"):
-    #            #back_1_menu() #def to be created later
+    spacePortOptions()
+    def spacePortOptions():
+        option = input("> ")
+        if option.lower() == ("buy_fuel"):
+           buy_fuel() #def to be created later
+        elif option.lower() == ("help"):
+            help_menu() 
+        elif option.lower() == ("back"):
+            ReturntoMap() #to be defined later
+        elif option.lower == ("Leave"):
+              leavePlanet(): #to be defined later 
+        while option.lower() not in ['buy_fuel', 'help', 'leave']:
+            print("Please enter a listed command")
+            option = input("> ")
+        if option.lower() == ("buy_fuel"):
+                buy_fuel() #def to be created later
+        elif option.lower() == ("help"):
+             help_menu()
+        elif option.lower() == ("leave"):
+                leavePlanet(): #to be defined later pass
+
+
+
+
 
 def quarryPrompt():
     print('#############################')
@@ -96,6 +125,25 @@ def quarryPrompt():
     print('Back to planet map')
     print('help')
     print('#############################')
+    #quarryOptions()
+    # def QuarryOptions():
+    #    option = input("> ")
+    #    if option.lower() == ("Mine"):
+    #       Mine() #def to be created later
+    #    elif option.lower() == ("help"):
+    #        #help_menu() 
+    #    elif option.lower == ("leave"):
+    #        sys.exit()
+    #    while option.lower() not in ['Mine', 'help', 'leave']:
+    #        print("Please enter a listed command")
+    #        option = input("> ")
+    #        if option.lower() == ("Mine"):
+    #            #Mine() #def to be created later
+    #        elif option.lower() == ("help"):
+    #            help_menu()
+    #        elif option.lower() == ("leave"):
+    #            #back_1_menu() #def to be created later
+    
     
 
 
