@@ -1,5 +1,6 @@
 import pygame
 import sys
+from pytmx.util_pygame import load_pygame
 from settings import *
 from level import Level
 
@@ -9,6 +10,8 @@ class Game():
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGTH))
         pygame.display.set_caption('DEEP SPACE II')
+        tmx_data = load_pygame('../images/earthmap.tmx')
+        print(dir(tmx_data))
         self.clock = pygame.time.Clock()
         
         self.level = Level()
