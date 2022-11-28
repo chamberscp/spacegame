@@ -1,0 +1,2 @@
+Project design will fall under feature branches, with each day having a end goal for each team member 
+working jointly to finish one or more goals that will enable more of the user requirements

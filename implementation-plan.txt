@@ -1,0 +1,11 @@
+ how we format requirements:
+ Customer reqirements and project stretch goals are listed in a user reqirements file and refered to for planning and design
+ 
+ what design artifacts we will create: goal is to have as time passes, 
+ a slightly more funtioning version of the game to provide the customer with each week
+ 
+ 
+ who will own the team’s code: The code will be stored in the github repository and owned by Chris, Chambers
+ 
+ how changes will be applied to the code: Each member of the team will focus on a differing but related aspect at a time, as to not cause issues writing the same lines of codes
+ changes will be uploaded after team members are informed and both ready for the new pull request to be made.
