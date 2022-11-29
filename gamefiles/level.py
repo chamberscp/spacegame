@@ -2,7 +2,8 @@ import pygame
 from settings import *
 from tile import Tile
 from player import Player
-
+from support import *
+import random
 
 class Level():
     def __init__(self):
@@ -18,15 +19,36 @@ class Level():
         self.create_map()
         
     def create_map(self):
-        '''for row_index, row in enumerate(WORLD_MAP):
-            for column_index, column in enumerate(row):
-                x = column_index * TILESIZE
-                y = row_index * TILESIZE
-                if column == 'x':
-                    Tile((x,y),[self.visible_sprites, self.obstacle_sprites])
-                if column == 'p':
-                    self.player = Player((x,y),[self.visible_sprites], self.obstacle_sprites)'''
-        self.player = Player((350,350),[self.visible_sprites], self.obstacle_sprites)    
+        layouts = {
+            'water':import_csv_layout('earth_water.csv'),
+            'plants':import_csv_layout('earth_plants.csv'),
+            'rocks':import_csv_layout('earth_rocks.csv'),
+            'grass':import_csv_layout('earth_grass.csv')
+            }
+        graphics = {
+            'water' : import_folder('../images/32X32.png'),
+            'rocks' : import_folder('../images/32X32.png'),
+            'plants' : import_folder('../images/32X32.png'),
+            'grass' : import_folder('../images/32X32.png')
+        }
+        print(graphics)
+        
+        for style,layout in layouts.items():
+            for row_index, row in enumerate(layout):
+                for column_index, column in enumerate(row):
+                    if column != '-1':
+                        x = column_index * TILESIZE
+                        y = row_index * TILESIZE
+                        if style == 'water':  
+                            Tile((x,y), [self.obstacle_sprites], 'water')
+                        #if style == 'plants' : 
+                            #surface = graphics[ 'plants' ] [int(column)] 
+                            #Tile((x,y), [self.visible_sprites,self.obstacle_sprites], 'plants' , surface)
+                        if style == 'rocks' :  
+                            surf = graphics['rocks'][int(column)]
+                            Tile((x,y), [self.visible_sprites,self.obstacle_sprites], 'rocks', surf)
+                        
+        self.player = Player((450,350),[self.visible_sprites], self.obstacle_sprites)    
     
     def run(self):
         #update and run the game
@@ -44,7 +66,7 @@ class YSortCameraGroup(pygame.sprite.Group):
         self.half_height = self.display_surface.get_size()[1] // 2
         self.offset = pygame.math.Vector2()
         
-        self.floor_surf = pygame.image.load('../images/newearth.png').convert()
+        self.floor_surf = pygame.image.load('../images/earth.png').convert()
         self.floor_rect = self.floor_surf.get_rect(topleft =(0,0))
     
     def custom_draw(self, player):
