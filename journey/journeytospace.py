@@ -26,8 +26,6 @@ def P1_Sec1():
     time.sleep(a)
     print("you head inside, as there is nothing else for miles....")
     time.sleep(a)
-    print("The ground starts rumbling...")
-    time.sleep(a)
     print("Your helmet light cuts through the darkness...")
     time.sleep(a)
     print()
@@ -51,14 +49,14 @@ def P1_Sec1():
     print("Path #3: Go down the right path *you sense it's warmer down this path, and yet your body goes cold when you look at it*...")
     time.sleep(a)
     print()
-    firstPath = input("Which path will you choose? (1/2/3): ")
-    if firstPath == '1':
+    Path_p1s1 = input("Which path will you choose? (1/2/3): ")
+    if Path_p1s1 == '1':
         print()
         path1()
-    elif firstPath == '2':
+    elif Path_p1s1 == '2':
         print()
         path2()
-    elif firstPath == '3':
+    elif Path_p1s1 == '3':
         print()
         path3()
 
@@ -132,12 +130,28 @@ def P1_Sec2():
     print("you see a street sign in galatic basic that reads...")
     time.sleep(a)
     print("---Welcome to Bastion: last remaining city of Alpha Centari---")
+    print("---               SPACEPORT: 500m <==                      ---")
+    print("---               RUSTY'S SUPLLY: 200m ==>                 ---")
+    print("---               EMERGENCY SHELTER: 50m ^                 ---")
+    print("---               CITY POPULATION: ( 1 )                   ---")
     time.sleep(a)
-    print("---SPACEPORT: 500m < \n \
-        RUSTY'S SUPLLY: 200m > \n \
-        CITY POPULATION: ( 1 ) ---")
+    print()
+    print("Path #1: Head to the SPACEPORT, Maybe if you are lucky there is a ship to escape this wasteland...*....")
     time.sleep(a)
-
+    print("Path #2: Head to the supply store, maybe you can fin")
+    time.sleep(a)
+    print("Path #3: Go down the right path *you sense it's warmer down this path, and yet your body goes cold when you look at it*...")
+    time.sleep(a)
+    Path_p1s1 = input("Which path will you choose? (1/2/3): ")
+    if Path_p1s1 == '1':
+        print()
+        Sec2_path1()
+    elif Path_p1s1 == '2':
+        print()
+        Sec2_path2()
+    elif Path_p1s1 == '3':
+        print()
+        Sec2_path3()
 
 
 
