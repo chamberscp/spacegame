@@ -1,7 +1,7 @@
 import sys
 import time
 
-a = 0.4
+a = 0.8
 b = 0.2
 c = 0.08
 
@@ -186,14 +186,14 @@ def Sec2_path1():
     Path_p1s1 = input("Which path will you choose? (1/2/3): ")
     #if Path_p1s1 == '1' and credits: > 2500
     #    print()
-    #    Sec2_path1()
+    #    Sec2_path1.1()
     #else print("insufficient funds, PLEASE CHOOSE ANOTHER OPTION")
     #elif Path_p1s1 == '2' and fuel > 50 
     #    print()
-    #    Sec2_path2() #tbd
+    #    Sec2_path2.1() #tbd
     #elif Path_p1s1 == '3':
     #    print()
-    #    Sec2_path3() #tbd
+    #    Sec2_path3.1() #tbd
 
 # this is where we will need either the fuel or the credit function checked and called
 # either one allowing player progress
