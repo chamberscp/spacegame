@@ -8,11 +8,15 @@ c = 0.08
 credits = 0
 age = 20
 fuel = 0
+warpSpeed = 0 #tbd
 
 
-## game paths and loops ##
+#================================== Game paths and loops =========
 
-def intro():
+
+
+#================================== PLANET 1 SECTION 1 ===========
+def P1_Sec1():
     print()
     print("(## DEEP SPACE III but in text! ###)")
     time.sleep(a)
@@ -71,18 +75,29 @@ def path1():
     time.sleep(a)
     print("As you exit the cave your scanner starts beeping....")
     time.sleep(a)
+    P1_Sec2()
     #some how in this path we need to add credits to the varriable posted at the top of the code
 
     
 
 
 def path2():
-    print("you walk the path until you come into a large room")
+    print("you walk the path until you come up to what looks like a large room")
     time.sleep(a)
-    print("The room is filled with humming light blue crystals, 'dilithium!' you exclaim.")
+    print("The humming getting stronger as you get close, you ready yourself for whatever danger may lurk inside...")
+    time.sleep(a)
+    print("upon closer inspection the room is filled with humming light blue crystals, 'dilithium!' you exclaim.")
     time.sleep(a)
     print("you carefuly extract every viable dilithium crystal from the deposits *you find enough for 100 standard galactic units of fuel")
     time.sleep(a)
+    # and here we need to add 100 to the unit for fuel
+    print("nothing of value remains, you head back to where the cave splits....")
+    time.sleep(a)
+    print("you find the other paths are no longer there, the stone seemingly smoothed over, only the exit remains....")
+    time.sleep(a)
+    print("As you exit the cave your scanner starts beeping....")
+    P1_Sec2()
+
 
 
 
@@ -105,9 +120,32 @@ def path3():
 
 
 
+###==================== PLANET 1 SECTION 2 ============== ###
+
+def P1_Sec2():
+    print("you look down at your scanner...")
+    time.sleep(a)
+    print("you see on your map a settlement has been detected 5km away....with water and O2 reserves running low, you decide to head there, what have you got to lose?")
+    time.sleep(a)
+    print("after slogging through the wastes for what feels like hours, but your chono tells you was barely an 45 minutes, you arrive at the edge of the settlement, must just be your mind playing tricks...")
+    time.sleep(a)
+    print("you see a street sign in galatic basic that reads...")
+    time.sleep(a)
+    print("---Welcome to Bastion: last remaining city of Alpha Centari---")
+    time.sleep(a)
+    print("---SPACEPORT: 500m < \n \
+        RUSTY'S SUPLLY: 200m > \n \
+        CITY POPULATION: ( 1 ) ---")
+    time.sleep(a)
 
 
-### Main Function ###
+
+
+
+
+
+
+#=================== Main Function =========
 
 print()
 print()
@@ -133,4 +171,4 @@ if startGame == "n" or startGame == "N":
     print("Maybe next time")
     time.sleep(3)
 elif startGame == "y" or startGame == "Y":
-    intro()
+    P1_Sec1()
