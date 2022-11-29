@@ -35,11 +35,11 @@ def intro():
     print("Three paths are revealed:")
     time.sleep(a)
     print()
-    print("Path #1: Go down the Center path, *you see what looks to be claw marks on the walls*....")
+    print("Path #1: Go down the Left path, *you see what looks to be claw marks on the walls*....")
     time.sleep(a)
-    print("Path #2: Go down the right path, *you think to yourself you heard faint sounds coming from this direction*....")
+    print("Path #2: Go down the Center path, *you think to yourself you heard faint sounds coming from this direction*....")
     time.sleep(a)
-    print("Path #3: turn around and leave the cave....")
+    print("Path #3: Go down the right path *you sense it's warmer down this path, and yet your body goes cold when you look at it*...")
     time.sleep(a)
     print()
     firstPath = input("Which path will you choose? (1/2/3): ")
@@ -53,8 +53,11 @@ def intro():
         print()
         path3()
 
-
-
+def path1():
+    print("As you go down the path you begin to see dried blood and old bones, human bones....")
+    time.sleep(a)
+    print("you can tell this tragedy happened a while ago, so you calm yourself and explore the room.")
+    time.sleep(a)
 
 
 ### Main Function ###
