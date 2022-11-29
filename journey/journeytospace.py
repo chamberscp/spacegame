@@ -1,9 +1,12 @@
 import sys
 import time
 
-a = 2
+a = 0.4
 b = 0.2
 c = 0.08
+
+credits = 0
+
 
 ## game paths and loops ##
 
@@ -26,8 +29,8 @@ def intro():
     for character in question:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(b)
-    time.sleep(1.0)
+        time.sleep(0.05)
+    time.sleep(b)
     print()
     print()
     print("As you venture inside you see the cave splits off into several tunnels....")
@@ -56,9 +59,20 @@ def intro():
 def path1():
     print("As you go down the path you begin to see dried blood and old bones, human bones....")
     time.sleep(a)
-    print("you can tell this tragedy happened a while ago, so you calm yourself and explore the room.")
+    print("you can tell this tragedy happened a while ago, so you calm yourself and explore the room..")
     time.sleep(a)
+    print("After the grizzly job of searching the bodies, you've collected 5000 Credits..maybe you'll find some use for these later....")
+    time.sleep(a)
+    
 
+
+def path2():
+    print("this is wrong")
+
+
+
+def path3():
+    print("this is also wrong")
 
 ### Main Function ###
 
