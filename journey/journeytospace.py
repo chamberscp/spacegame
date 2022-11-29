@@ -11,6 +11,7 @@ fuel = 0
 warpSpeed = 0 #tbd
 
 
+
 #================================== Game paths and loops =========
 
 
@@ -19,6 +20,12 @@ warpSpeed = 0 #tbd
 def P1_Sec1():
     print()
     print("(## DEEP SPACE III but in text! ###)")
+    time.sleep(a)
+    print("You feel as if your body was tossed about like a ragdoll, you stuggle to bring even your basic senses into focus")
+    time.sleep(a)
+    print("For a fraction of a second you feel an intense heat, and a flash blinds and disorents you even more then you were at first, and then like that, it passes...")
+    time.sleep(a)
+    print("After a few moments of shaking yourself and stuggling to stand, things slowly clear as you regain your bearing")
     time.sleep(a)
     print("You look around you, seemingly nothing but barren wastes....but wait")
     time.sleep(a)
@@ -135,12 +142,14 @@ def P1_Sec2():
     print("---               EMERGENCY SHELTER: 50m ^                 ---")
     print("---               CITY POPULATION: ( 1 )                   ---")
     time.sleep(a)
+    print("you think to yourself Alpha Centari is a Star not a planet, rather odd.......")
+    time.sleep(a)
     print()
     print("Path #1: Head to the SPACEPORT, Maybe if you are lucky there is a ship to escape this wasteland...*....")
     time.sleep(a)
     print("Path #2: Head to the supply store, maybe you can fin")
     time.sleep(a)
-    print("Path #3: Go down the right path *you sense it's warmer down this path, and yet your body goes cold when you look at it*...")
+    print("Path #3: Head to the emergency shelter, *...")
     time.sleep(a)
     Path_p1s1 = input("Which path will you choose? (1/2/3): ")
     if Path_p1s1 == '1':
@@ -153,7 +162,9 @@ def P1_Sec2():
         print()
         Sec2_path3()
 
-
+def Sec2_path1():
+    print("You Decide the SPACEPORT is your best bet, you follow the signs..")
+    time.sleep(a)
 
 
 
@@ -171,13 +182,13 @@ print("     ######################")
 print()
 print()
 time.sleep(a)
-print("## DEEP SPACE III, but in TEXT! ###")
+print("##           -= DEEP SPACE III, but in TEXT!  =-                       ##")
 time.sleep(a)
-print("##You awake in a crashed escape pod on a desolate world ##")
+print("## You awake in a crashed escape pod on a desolate world               ##")
 time.sleep(a)
 print("## Before you lies the daunting task of finding your way back to Earth ##")
 time.sleep(a)
-print("## The journey will be hard, do you have what it takes? ##")
+print("## The journey will be hard, do you have what it takes?                ##")
 time.sleep(a)
 print()
 startGame = input("Would you like to start the game? (Y/N): ")
