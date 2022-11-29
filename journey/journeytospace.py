@@ -72,14 +72,18 @@ def path1():
     print("As you exit the cave your scanner starts beeping....")
     time.sleep(a)
     #some how in this path we need to add credits to the varriable posted at the top of the code
+
     
 
 
 def path2():
     print("you walk the path until you come into a large room")
     time.sleep(a)
-    print("")
+    print("The room is filled with humming light blue crystals, 'dilithium!' you exclaim.")
     time.sleep(a)
+    print("you carefuly extract every viable dilithium crystal from the deposits *you find enough for 100 standard galactic units of fuel")
+    time.sleep(a)
+
 
 
 def path3():
@@ -87,9 +91,9 @@ def path3():
     time.sleep(a)
     print("You feel Darkness suddenly begin to envolpe you, your head swirls and you feel like the world itself is spinning around you....")
     time.sleep(a)
-    print("As you feel your eyes close for what you know is the last time, you see the display on your arm blaring a warning...")
+    print("As you feel your eyes close for what you know is the last time, you see the display on your arm from your suits AI blares a warning but all too late.....")
     time.sleep(a)
-    print("## INTENSE GAMMA RADIATION BURST DETECTED ###..")
+    print("### ATHENA: INTENSE GAMMA RADIATION BURST DETECTED ###..")
     time.sleep(a)
     print("The light fades as last, at least you don't have to worry about finding your way home anymore.......")
     time.sleep(a)
