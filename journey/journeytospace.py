@@ -27,6 +27,8 @@ def P1_Sec1():
     time.sleep(a)
     print("After a few moments of shaking yourself and stuggling to stand, things slowly clear as you regain your bearing")
     time.sleep(a)
+    print("your display reads: NO BREATHABLE ATMOSPHERE DETECTED, NO SIGNS OF LIFE, EMERGENCY BEACON NON FUNCTIONAL")
+    time.sleep(a)
     print("You look around you, seemingly nothing but barren wastes....but wait")
     time.sleep(a)
     print("you see something, a cave....")
@@ -149,7 +151,7 @@ def P1_Sec2():
     time.sleep(a)
     print("Path #2: Head to the supply store, maybe you can fin")
     time.sleep(a)
-    print("Path #3: Head to the emergency shelter, *...")
+    print("Path #3: Head to the emergency shelter, maybe you can find some food and water and more importantly breathable *...")
     time.sleep(a)
     Path_p1s1 = input("Which path will you choose? (1/2/3): ")
     if Path_p1s1 == '1':
@@ -165,7 +167,18 @@ def P1_Sec2():
 def Sec2_path1():
     print("You Decide the SPACEPORT is your best bet, you follow the signs..")
     time.sleep(a)
-
+    print("after some time you come to the SPACEPORT, no signs of life, its erie and quiet, your AI reports even no microorganisms....")
+    time.sleep(a)
+    print("You walk through the seemingly countless empty docks, until at the very end you find a single ship, covered in dust but otherwise intact.. ..")
+    time.sleep(a)
+    print("as you board the vessle it seems funtional, main power even still works, the terminal is still linked to the ports automated system....")
+    time.sleep(a)
+    print("you press the flashing button on the panel to activate the AI..")
+    time.sleep(a)
+    print("<CUSTOMER_LOGIN> GGG...GGRRRR...GRRRREEE....GREETINGS <CUSTOMER_ID STRING NOT FOUND> and welcome to Bastion Port, it looks like your ship is <READY> to fly!..")
+    time.sleep(a)
+    print("you press the flashing button on the panel to activate the AI..")
+    time.sleep(a)
 
 
 
