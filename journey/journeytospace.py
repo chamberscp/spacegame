@@ -177,8 +177,26 @@ def Sec2_path1():
     time.sleep(a)
     print("<CUSTOMER_LOGIN> GGG...GGRRRR...GRRRREEE....GREETINGS <CUSTOMER_ID STRING NOT FOUND> and welcome to Bastion Port, it looks like your ship is <READY> to fly!..")
     time.sleep(a)
-    print("you press the flashing button on the panel to activate the AI..")
+    print("the AI goes on: It seems your ship is lacking fuel, please ensure sufficient <MIN 50 STANDARD FUEL UNITS> dilithium has been placed in fuel storage cells....")
     time.sleep(a)
+    print("AI: for a one time fee of <[2500]> Galactic Credits (all taxes and fees included) Bastion Port systems will automaticly refuel your ship and ensure you are flight <SYSTEM_CHECK_GREEN>!..")
+    time.sleep(a)
+    print("you look at the display....")
+    time.sleep(a)
+    Path_p1s1 = input("Which path will you choose? (1/2/3): ")
+    #if Path_p1s1 == '1' and credits: > 2500
+    #    print()
+    #    Sec2_path1()
+    #else print("insufficient funds, PLEASE CHOOSE ANOTHER OPTION")
+    #elif Path_p1s1 == '2' and fuel > 50 
+    #    print()
+    #    Sec2_path2() #tbd
+    #elif Path_p1s1 == '3':
+    #    print()
+    #    Sec2_path3() #tbd
+
+# this is where we will need either the fuel or the credit function checked and called
+# either one allowing player progress
 
 
 
