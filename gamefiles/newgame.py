@@ -1,5 +1,7 @@
 import pygame
 import sys
+from pygame_functions import *
+import random
 
 from settings import *
 from level import Level
@@ -91,7 +93,9 @@ class Player:
 
 player = Player()
 
-
+#### Text Lables ####
+#fuelLabel = makeLabel("Test Text, can you see me?", 40, 10, 10, "Blue", "Agency FB", "yellow" )
+#showLabel(fuelLabel)
 
 
 ##### story promts #####
@@ -240,3 +244,4 @@ def cavePrompt():
                 help_menu() 
             elif option.lower() == ("back"):
                 ReturntoMap()
+
