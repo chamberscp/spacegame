@@ -16,7 +16,7 @@ warpSpeed = 0 #tbd
 
 
 
-#================================== PLANET 1 SECTION 1 ===========
+#================================== PLANET 1 SECTION 1: Intro to starter planet ========================
 def P1_Sec1():
     print()
     print("(## DEEP SPACE III but in text! ###)")
@@ -127,7 +127,7 @@ def path3():
 
 
 
-###==================== PLANET 1 SECTION 2 ============== ###
+###==================== PLANET 1 SECTION 2: Bastion city and starport ============== ###
 
 def P1_Sec2():
     print("you look down at your scanner...")
@@ -153,14 +153,14 @@ def P1_Sec2():
     time.sleep(a)
     print("Path #3: Head to the emergency shelter, maybe you can find some food and water and more importantly breathable *...")
     time.sleep(a)
-    Path_p1s1 = input("Which path will you choose? (1/2/3): ")
-    if Path_p1s1 == '1':
+    secondpath = input("Which path will you choose? (1/2/3): ")
+    if secondpath == '1':
         print()
         Sec2_path1()
-    elif Path_p1s1 == '2':
+    elif secondpath == '2':
         print()
         Sec2_path2()
-    elif Path_p1s1 == '3':
+    elif secondpath == '3':
         print()
         Sec2_path3()
 
@@ -183,12 +183,19 @@ def Sec2_path1():
     time.sleep(a)
     print("you look at the display....")
     time.sleep(a)
-    Path_p1s1 = input("Which path will you choose? (1/2/3): ")
-    #if Path_p1s1 == '1' and credits: > 2500
-    #    print()
-    #    Sec2_path1.1()
+    print("Path #1: attempt to fill the fuel cells yourself (requires minimum 50 standard fuel units)....")
+    time.sleep(a)
+    print("Path #2: Pay for the automated system to refuel the ship for you (requires 2500 credits minimum...")
+    time.sleep(a)
+    thirdpath = input("Which path will you choose? (1/2/3): ")
+       # if Path_p1s1 == '1' and credits: > 2500 ===========================   Need to find a way to make the credit check conversion
+    if Sec2_path1_1 == ' 1 ':
+        print()
+        Sec2_path1_1()
+ 
+    
     #else print("insufficient funds, PLEASE CHOOSE ANOTHER OPTION")
-    #elif Path_p1s1 == '2' and fuel > 50 
+    #elif Path_p1s == '2' and fuel > 50 
     #    print()
     #    Sec2_path2.1() #tbd
     #elif Path_p1s1 == '3':
@@ -197,6 +204,23 @@ def Sec2_path1():
 
 # this is where we will need either the fuel or the credit function checked and called
 # either one allowing player progress
+
+def Sec2_path1_1():
+    print("<PAYMENT RECIVED> TTHH--- THHHAA--- THANK YOU! payment accepted, Please enjoy some complimentary refreshments, courtesy of Bastion port! ")
+    time.sleep(a)
+    print("A nearby terminal opens a panel, sealed packages containing emergency water rations and food stuffs of questionable quality are presented, you take them greedily.")
+    time.sleep(a)
+    print("After eating in the Sealed safty of the ship while the station refuled and prepared the ship, you take a moment to check the NAV computer and see only one destination point, a relay point in high orbit....")
+    time.sleep(a)
+    print("Worst case you think to yourself, you can try and scan again from orbit, you double check flight preperations.....")
+    time.sleep(a)
+    print("You take one last scan of the planet with the ships sensors, no signs of life, no settlements besides ruins and rubble....")
+    time.sleep(a)
+    print("Stories of devastated worlds in the outer colonies, had reached you before, but those were supposed to be only rumors.....")
+    time.sleep(a)
+    print("you look at the display....")
+    time.sleep(a)
+
 
 
 
