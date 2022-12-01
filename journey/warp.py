@@ -1,86 +1,105 @@
 from fractions import Fraction
+import math
 
-c = 670616629
+light = 299792458
 mph = 0
-
-
-
-a = 'Alpha_Centari'     
-Aplha_Centari = 4.29        # Has 3 known planets
-b = 'Epsillon_Eridani'
-Epsillon_Eridanio = 10.50     # Has 1 known planet
-c = 'Wolf1061' 
-Wolf_1061 = 13.8             # 3 planets, 1 in habitable zone
-d= 'HR3259'
-HR3259 = 41.04               # Has 3 known planets
-
 v = 0
+var1 = 1
+WF = 1
+
+a = 'Alpha_Centari'    # 4.29c   # Has 3 known planets
+b = 'Epsillon_Eridani' # 10.50c  # Has 1 known planet
+c = 'HR3259'           # 41.04c  # Has 3 known planets
+d = 'LP 890-9'         # 105c    # Has 2 known planets
+
+
 
 #Calculate velocity in m/s
 
 def getVelocity():
     global v
     global mph
-    var1 = input('Please enter the warp speed (0-10) that you would like to go (and keep in mind that the faster you will go you will burn more fuel, but age less): ')
-    var1 = Fraction(var1)
-    expo = Fraction(10/3)
-    result = var1**expo
-    if v == 0:
-        v = result * 299792458
-        print(f'Velocity is equal to {v} m/s')
-        mph = v*2.237
-        print(f'{mph} mph')
-        print('time in hours = distance in miles / vel ')
-
-
+    global WF
+    WF =input('Please enter the warp speed (0-10) that you would like to go (and keep in mind that the faster you will go you will burn more fuel, but age less): ')
+    
+    if WF == '1':
+        v = light * 1
+    elif WF == '2':
+        v = light * 8
+    elif WF == '3':
+        v = light * 27
+    elif WF == '4':
+        v = light * 50 #64
+    elif WF == '5':
+        v = light * 125
+    elif WF == '6':
+        v = light * 216
+    elif WF == '7':
+        v = light * 343
+    elif WF == '8':
+        v = light * 512
+    elif WF == '9':
+        v = light * 729
+    elif WF == '10':
+        v = light * 1000
+    else:
+        print('Improper Warp Factor')          
+    
+    mph = v * 2.237
+    print(f'Velocity is equal to {mph} mph')    
+    
+        
 def getTime():
     global v
     global mph
     m = input('Where would you like to go? ')
     print(m)
     if m == '1':
-        dist = 2.54*(10**13)
-        print(f'{a} is {dist} light years away.')
+        dist = 2.5219*(10**13)
+        print(f'{a} is 4.29 light years away.')
         getVelocity()
         time = dist / mph
         days = time/24
         print(f'It will take {days} days to get to {a}')
-      
-    '''elif m == '2':
-        x = Epsillon_Eridani
-        dist = 10.00
-        print(f'{x} is {dist} light years away.')
+    
+    elif m == '2':
+        dist = 6.1726*(10**13)
+        print(f'{b} is 10.50 light years away.')
         getVelocity()
-        time = dist / v
-        print(f'It will take {time} hours to get to {x}')'''
+        time = dist / mph
+        days = time/24
+        print(f'It will take {days} days to get to {b}')
     
-       
-
-getTime()
-      
-      
-       
+    elif m == '3':
+        dist = 241259000000000
+        print(f'{c} is 41.04 light years away.')
+        getVelocity()
+        time = dist / mph
+        days = time/24      
+        print(f'It will take {days} days to get to {c}') 
      
-
-
-
-
+    elif m == '4':
+        dist = 617300000000000
+        print(f'{d} is 105 light years away.')
+        getVelocity()
+        time = dist / mph
+        days = time/24      
+        print(f'It will take {days} days to get to {d}')  
         
-
-
-
-
-
-
-
-
-
-
-
-
-#calculate age in days
-#calculate days to years
-#calcualate time to travel in days
-    #calculate time to travel in hours
+        
+def fuelUsage():
+    normal = 1
+    fueltank = 100
+    if WF > 0 and WF <= 2:
+        usage = normal * 1.5
+    elif WF > 2 and WF <= 5:
+        usage = normal * 2.5 
+    elif WF > 5 and WF <= 8:
+        usage = normal * 5
+    elif WF > 8:
+        usage = normal * 10 
+        
     
-
+    
+        
+getTime()
