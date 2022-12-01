@@ -299,39 +299,39 @@ def pick_Planet():
     
 def getTime():
     global v
-    global mph
     
+    global mph
     m = input('Where would you like to go? ')
     print(m)
     if m == '1':
-        dist = 2.5219*(10**13)
         print(f'{AP} is 4.29 light years away.')
         getVelocity()
+        dist = 2.5219*(10**13)
         time = dist / mph
-        days = time/24
-        print(f'It will take {days} days to get to {AP}')
         #go_to_Alpha_Proxima()
+        print(f'It will take {days} days to get to {AP}')
+        days = time/24
     
     elif m == '2':
-        dist = 6.1726*(10**13)
-        print(f'{EE} is 10.50 light years away.')
-        getVelocity()
-        time = dist / mph
-        days = time/24
-        print(f'It will take {days} days to get to {EE}')
-        #go_to_Epsillon_Eridani()
-    
     elif m == '3':
-        dist = 241259000000000
+    
+        days = time/24
+        time = dist / mph
+        getVelocity()
+        print(f'{EE} is 10.50 light years away.')
+        print(f'It will take {days} days to get to {EE}')
+        dist = 6.1726*(10**13)
+        #go_to_Epsillon_Eridani()
         print(f'{HR} is 41.04 light years away.')
         getVelocity()
+        dist = 241259000000000
+        #go_to_HR3259()
+    elif m == '4':
+        dist = 617300000000000
         time = dist / mph
         days = time/24      
         print(f'It will take {days} days to get to {HR}') 
-        #go_to_HR3259()
      
-    elif m == '4':
-        dist = 617300000000000
         print(f'{LP} is 105 light years away.')
         getVelocity()
         time = dist / mph
@@ -343,37 +343,39 @@ def getVelocity():
     global v
     global mph
     global WF
-    WF =input('Please enter the warp speed (0-10) that you would like to go (and keep in mind that the faster you will go you will burn more fuel, but age less): ')
     
+    WF =input('Please enter the warp speed (0-10) that you would like to go (and keep in mind that the faster you will go you will burn more fuel, but age less): ')
     if WF == '1':
         v = light * 1
-    elif WF == '2':
-        v = light * 8
-    elif WF == '3':
-        v = light * 27
-    elif WF == '4':
-        v = light * 64
-    elif WF == '5':
-        v = light * 125
-    elif WF == '6':
-        v = light * 216
-    elif WF == '7':
-        v = light * 343
-    elif WF == '8':
+
+    print(f'Velocity is equal to {mph} mph')    
+    mph = v * 2.237
+    
+        print('Improper Warp Factor')          
+    else:
+        v = light * 1000
+    elif WF == '10':
+        v = light * 729
         v = light * 512
     elif WF == '9':
-        v = light * 729
-    elif WF == '10':
-        v = light * 1000
-    else:
-        print('Improper Warp Factor')          
-    
-    mph = v * 2.237
-    print(f'Velocity is equal to {mph} mph')    
-
+    elif WF == '8':
+        v = light * 343
+    elif WF == '7':
+        v = light * 216
+        v = light * 125
+    elif WF == '5':
+    elif WF == '6':
+        v = light * 64
+    elif WF == '4':
+        v = light * 27
+    elif WF == '3':
+        v = light * 8
+    elif WF == '2':
 def go_to_Alpha_Proxima():
     print('')
 
+def go_to_worlf359():
+    print('')
 
 def go_to_Epsillon_Eridani():
     print('')
@@ -388,6 +390,7 @@ def go_to_LP890():
 #============= Player calculations ================================ 
 
     
+
 
 
 
