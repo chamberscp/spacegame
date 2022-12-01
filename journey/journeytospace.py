@@ -171,13 +171,19 @@ def P1_Sec2():
         print()
         Sec2_path3()
 
-def Sec2_path2():
-    pass
 
+#================= Planet 1: Supply store section (alows the player to convert fuel to credits or vise versa) ======================
+
+def Sec2_path2():
+    print("you bla")
+
+
+
+#================ Planet 1: Shelter section (kills the player) ============================
 def Sec2_path3():
     pass
 
-#================== Planet 1 Starport section ==========================       
+#================== Planet 1: Starport section best option, utilizes fuel or credits and leaves planet, go to travel section ==========================       
 
 def Sec2_path1():
     global fuel
@@ -278,7 +284,22 @@ def pick_Planet():
     print("Ares:'Epsillon_Eridani'  # 10.50c     # Has 1 known planet       ")
     print()
 
+    
+    print("Path #1: Travel to 'Alpha Proxima'....")
+    time.sleep(a)
+    print("Path #2: Travel to 'HR3259'")
+    time.sleep(a)
+    print()
+    pick_Planet_path = input("Which path will you choose? (1/2): ")
+    print()
+    if pick_Planet_path == '1':
+        print()
+        go_to_Alpha_Proxima()
+    elif pick_Planet_path == '2':
+        #somefuntion
 
+def go_to_Alpha_Proxima():
+    print('')
 
 
 
