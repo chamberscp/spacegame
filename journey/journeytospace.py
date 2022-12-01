@@ -12,7 +12,7 @@ warpSpeed = 0 #tbd
 
 
 
-#================================== Game paths and loops =========
+#=============================================  Game paths and loops ====================================
 
 
 
@@ -72,11 +72,15 @@ def P1_Sec1():
 
 #===============Planet one path 1: give player starting credits  ============
 def path1():
+    global credits
     print("As you go down the path you begin to see dried blood and old bones, human bones....")
     time.sleep(a)
     print("you can tell this tragedy happened a while ago, so you calm yourself and explore the room..")
     time.sleep(a)
     print("After the grizzly job of searching the bodies, you've collected 5000 Credits..maybe you'll find some use for these later....")
+    time.sleep(a)
+    credits = credits + 5000
+    print("Credits: 5000")
     time.sleep(a)
     print("nothing of value remains, you head back to where the cave splits....")
     time.sleep(a)
@@ -91,6 +95,7 @@ def path1():
 
 #===============Planet one path 2: give the player starting Fuel  ============
 def path2():
+    global fuel
     print("you walk the path until you come up to what looks like a large room")
     time.sleep(a)
     print("The humming getting stronger as you get close, you ready yourself for whatever danger may lurk inside...")
@@ -99,7 +104,7 @@ def path2():
     time.sleep(a)
     print("you carefuly extract every viable dilithium crystal from the deposits *you find enough for 100 standard galactic units of fuel")
     time.sleep(a)
-    # and here we need to add 100 to the unit for fuel
+    fuel = fuel + 100
     print("nothing of value remains, you head back to where the cave splits....")
     time.sleep(a)
     print("you find the other paths are no longer there, the stone seemingly smoothed over, only the exit remains....")
@@ -175,6 +180,8 @@ def Sec2_path3():
 #================== Planet 1 Starport section ==========================       
 
 def Sec2_path1():
+    global fuel
+    global credits
     print("You Decide the SPACEPORT is your best bet, you follow the signs..")
     time.sleep(a)
     print("after some time you come to the SPACEPORT, no signs of life, its erie and quiet, your AI reports even no microorganisms....")
@@ -200,24 +207,23 @@ def Sec2_path1():
     print()
     Planet1_path3 = input("Which path will you choose? (1/2): ")
     print()
-    if Planet1_path3 == '1':
+    if Planet1_path3 == '1' and credits > 2500:
+        credits = credits - 2500
         print()
         Sec2_path1_1()
-    elif Planet1_path3 == '2':
+    elif Planet1_path3 == 1 and credits < 2500:
+        print("Insufficient credits, please choose another option")
+        time.sleep(a)
+    elif Planet1_path3 == '2' and fuel > 50:
+        fuel = fuel - 50
         print()
-        print("aint ready yet")
-    #elif print("insufficient Fuel, PLEASE CHOOSE ANOTHER OPTION")
-    #elif Path_p1s == '2' #and credits is  > 2500  ============= need to add in the credit check and conversion  
-    #     print()
-    #     Sec2_path2.1() #tbd
-    #elif Path_p1s1 == '3':
-    #    print()
-    #    Sec2_path3.1() #tbd
+        Sec2_path1_2
+
 
 # this is where we will need either the fuel or the credit function checked and called
 # either one allowing player progress
 
-#===== P1 SP credits accepted path ====
+#================================= P1 STarport credits accepted path ====
 
 def Sec2_path1_1():
     print("<PAYMENT RECIVED> TTHH--- THHHAA--- THANK YOU! payment accepted, Please enjoy some complimentary refreshments, courtesy of Bastion port! ")
@@ -245,6 +251,17 @@ def Sec2_path1_1():
     pick_Planet()
     print()
 
+
+#==============P1 Starport Fuel accepted path =======================
+def Sec2_path1_2():
+    global fuel
+    print("put fuel in")
+    time.sleep(a)
+
+
+
+
+
 #============= Planet choice / warp travel section ================================ 
 
 def pick_Planet():
@@ -253,8 +270,13 @@ def pick_Planet():
     time.sleep(a)
     print("The Nav computer does not have the data saved either, the realization hits your, you'll have to gamble your fuel and your life to make a jump to a random system that you don't even know will work ....")
     time.sleep(a)    
-
-
+    print("you closely examine the list beacons your AI displays for you... ")
+    time.sleep(a)
+    print("##############################################################")
+    print("Ares: 'Alpha Proxima'    # 105c       # Has 2 known planets...   ")
+    print("Ares: 'HR3259'           # 41.04c     # Has 3 known planets      ")
+    print("Ares:'Epsillon_Eridani'  # 10.50c     # Has 1 known planet       ")
+    print()
 
 
 
@@ -272,21 +294,21 @@ def pick_Planet():
 
 print()
 print()
-print("     ######################")
-print("     |                    |")
-print("     |   DEEP SPACE III   |")
-print("     |                    |")
-print("     ######################")
+print("     #############################")
+print("     |                           |")
+print("     |   Journey To Space  III   |")
+print("     |                           |")
+print("     #############################")
 print()
 print()
 time.sleep(a)
-print("##           -= DEEP SPACE III, but in TEXT!  =-                       ##")
+print("##           -= Journey To Space III, but in TEXT!  =-                       ##")
 time.sleep(a)
-print("## You awake in a crashed escape pod on a desolate world               ##")
+print("## You awake in a crashed escape pod on a desolate world                     ##")
 time.sleep(a)
-print("## Before you lies the daunting task of finding your way back to Earth ##")
+print("## Before you lies the daunting task of finding your way back to Earth       ##")
 time.sleep(a)
-print("## The journey will be hard, do you have what it takes?                ##")
+print("## The journey will be hard, do you have what it takes?                      ##")
 time.sleep(a)
 print()
 startGame = input("Would you like to start the game? (Y/N): ")
