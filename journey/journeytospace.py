@@ -1,14 +1,23 @@
 import sys
 import time
-from warp import *
 
+AP = 'Alpha_Proxima'    
+EE = 'Epsillon_Eridani' 
+HR = 'HR3259'           
+LP = 'LP 890-9'         
 
 a = 0.2
 b = 0.2
 c = 0.08
+light = 299792458
+mph = 0
+v = 0
+var1 = 1
+WF = 1
+days = 7300
 
 credits = 0
-age = 20
+age = days/365
 fuel = 0
 warpSpeed = 0 #tbd
 
@@ -280,35 +289,105 @@ def pick_Planet():
     time.sleep(a)    
     print("you closely examine the list beacons your AI displays for you... ")
     time.sleep(a)
-    print("##############################################################")
-    print("Ares: 'Alpha Proxima'    # 105c       # Has 2 known planets...   ")
-    print("Ares: 'HR3259'           # 41.04c     # Has 3 known planets      ")
-    print("Ares:'Epsillon_Eridani'  # 10.50c     # Has 1 known planet       ")
-    print()
+    print("######################################################################")
+    print("Ares: (1)  'Alpha Proxima'    #   4.2c       # Has 2 known planets...   ")
+    print("Ares: (2)  'Epsillon_Eridani' # 10.50c      # Has 1 known planet       ")
+    print("Ares: (3)  'HR3259'           # 41.04c     # Has 3 known planets      ")
+    print("Ares: (4)  'LP 890-9'         #   105c       # Has 1 known planet       ")
+    print("######################################################################")
     getTime()
     
-    print("Path #1: Travel to 'Alpha Proxima'....")
-    time.sleep(a)
-    print("Path #2: Travel to 'HR3259'")
-    time.sleep(a)
-    print()
-    pick_Planet_path = input("Which path will you choose? (1/2): ")
-    print()
-    if pick_Planet_path == '1':
-        print()
-        go_to_Alpha_Proxima()
-    elif pick_Planet_path == '2':
-        #somefuntion
+def getTime():
+    global v
+    global mph
+    
+    m = input('Where would you like to go? ')
+    print(m)
+    if m == '1':
+        dist = 2.5219*(10**13)
+        print(f'{AP} is 4.29 light years away.')
+        getVelocity()
+        time = dist / mph
+        days = time/24
+        print(f'It will take {days} days to get to {AP}')
+        #go_to_Alpha_Proxima()
+    
+    elif m == '2':
+        dist = 6.1726*(10**13)
+        print(f'{EE} is 10.50 light years away.')
+        getVelocity()
+        time = dist / mph
+        days = time/24
+        print(f'It will take {days} days to get to {EE}')
+        #go_to_Epsillon_Eridani()
+    
+    elif m == '3':
+        dist = 241259000000000
+        print(f'{HR} is 41.04 light years away.')
+        getVelocity()
+        time = dist / mph
+        days = time/24      
+        print(f'It will take {days} days to get to {HR}') 
+        #go_to_HR3259()
+     
+    elif m == '4':
+        dist = 617300000000000
+        print(f'{LP} is 105 light years away.')
+        getVelocity()
+        time = dist / mph
+        days = time/24      
+        print(f'It will take {days} days to get to {LP}')
+        #go_to_LP890-9()
 
+def getVelocity():
+    global v
+    global mph
+    global WF
+    WF =input('Please enter the warp speed (0-10) that you would like to go (and keep in mind that the faster you will go you will burn more fuel, but age less): ')
+    
+    if WF == '1':
+        v = light * 1
+    elif WF == '2':
+        v = light * 8
+    elif WF == '3':
+        v = light * 27
+    elif WF == '4':
+        v = light * 64
+    elif WF == '5':
+        v = light * 125
+    elif WF == '6':
+        v = light * 216
+    elif WF == '7':
+        v = light * 343
+    elif WF == '8':
+        v = light * 512
+    elif WF == '9':
+        v = light * 729
+    elif WF == '10':
+        v = light * 1000
+    else:
+        print('Improper Warp Factor')          
+    
+    mph = v * 2.237
+    print(f'Velocity is equal to {mph} mph')    
 
 def go_to_Alpha_Proxima():
     print('')
 
 
+def go_to_Epsillon_Eridani():
+    print('')
 
+def go_to_HR3259():
+    print('')
 
+def go_to_LP890():
+    print('')
+    
 
+#============= Player calculations ================================ 
 
+    
 
 
 
@@ -340,4 +419,5 @@ if startGame == "n" or startGame == "N":
     print("Maybe next time")
     time.sleep(3)
 elif startGame == "y" or startGame == "Y":
+    print(f'You are : {age} years old.')
     P1_Sec1()
