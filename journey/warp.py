@@ -85,6 +85,8 @@ def getTime():
         time = dist / mph
         days = time/24      
         print(f'It will take {days} days to get to {d}')  
+
+    return (m, v)
         
         
 def fuelUsage():
@@ -102,4 +104,3 @@ def fuelUsage():
     
     
         
-getTime()

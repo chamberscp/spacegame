@@ -292,17 +292,20 @@ def pick_Planet():
     print("Path #2: Travel to 'HR3259'")
     time.sleep(a)
     print()
-    pick_Planet_path = input("Which path will you choose? (1/2): ")
+    (pick_Planet_path, velocity) = getTime()
+
     print()
     if pick_Planet_path == '1':
         print()
-        getTime()
         go_to_Alpha_Proxima()
     elif pick_Planet_path == '2':
         print('')
-
+        go_to_worlf359()
 
 def go_to_Alpha_Proxima():
+    print('')
+
+def go_to_worlf359():
     print('')
 
 
