@@ -14,10 +14,13 @@ mph = 0
 v = 0
 var1 = 1
 WF = 1
-days = 7300
 
 credits = 0
-age = days/365
+
+days = 0
+age = dayage/365
+dayage = 7300
+
 fuel = 0
 warpSpeed = 0 #tbd
 
@@ -300,6 +303,7 @@ def pick_Planet():
 def getTime():
     global v
     global mph
+    global days
     m = input('Where would you like to go? ')
     print(m)
     if m == '1':
@@ -369,7 +373,8 @@ def getVelocity(): # Get V in m/s
               
 
 def go_to_Alpha_Proxima():
-    print('')
+    ageCalc()
+    print(f'{age}')
 
 def go_to_worlf359():
     print('')
@@ -385,6 +390,13 @@ def go_to_LP890():
     
 
 #============= Player calculations ================================ 
+
+def ageCalc():
+    global dayage 
+    dayage = (age*365) + days
+    
+
+
 
     
 
