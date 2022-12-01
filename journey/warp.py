@@ -7,7 +7,7 @@ v = 0
 var1 = 1
 WF = 1
 
-a = 'Alpha_Centari'    # 4.29c   # Has 3 known planets
+a = 'Alpha_Proxima'    # 4.29c   # Has 3 known planets
 b = 'Epsillon_Eridani' # 10.50c  # Has 1 known planet
 c = 'HR3259'           # 41.04c  # Has 3 known planets
 d = 'LP 890-9'         # 105c    # Has 2 known planets
