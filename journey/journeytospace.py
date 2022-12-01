@@ -285,7 +285,7 @@ def pick_Planet():
     print("Ares: 'HR3259'           # 41.04c     # Has 3 known planets      ")
     print("Ares:'Epsillon_Eridani'  # 10.50c     # Has 1 known planet       ")
     print()
-    getTime()
+    
     
     print("Path #1: Travel to 'Alpha Proxima'....")
     time.sleep(a)
@@ -296,9 +296,10 @@ def pick_Planet():
     print()
     if pick_Planet_path == '1':
         print()
+        getTime()
         go_to_Alpha_Proxima()
     elif pick_Planet_path == '2':
-        #somefuntion
+        print('')
 
 
 def go_to_Alpha_Proxima():
