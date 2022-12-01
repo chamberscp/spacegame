@@ -69,6 +69,8 @@ def P1_Sec1():
         print()
         path3()
 
+
+#===============Planet one path 1: give player starting credits  ============
 def path1():
     print("As you go down the path you begin to see dried blood and old bones, human bones....")
     time.sleep(a)
@@ -87,7 +89,7 @@ def path1():
 
     
 
-
+#===============Planet one path 2: give the player starting Fuel  ============
 def path2():
     print("you walk the path until you come up to what looks like a large room")
     time.sleep(a)
@@ -107,7 +109,7 @@ def path2():
 
 
 
-
+#===============Planet one path 3: kill the player        ============
 def path3():
     print("You walk down the path, you see a bright green glow that seems just around the bend, but you can't quite catch it...")
     time.sleep(a)
@@ -205,6 +207,8 @@ def Sec2_path1():
 # this is where we will need either the fuel or the credit function checked and called
 # either one allowing player progress
 
+#===== P1 SP credits accepted path ====
+
 def Sec2_path1_1():
     print("<PAYMENT RECIVED> TTHH--- THHHAA--- THANK YOU! payment accepted, Please enjoy some complimentary refreshments, courtesy of Bastion port! ")
     time.sleep(a)
@@ -220,8 +224,11 @@ def Sec2_path1_1():
     time.sleep(a)
     print("you look at the display....")
     time.sleep(a)
+    pick_Planet()
 
 
+def pick_Planet():
+    print
 
 
 
