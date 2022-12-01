@@ -2,6 +2,7 @@ import sys
 import time
 from warp import *
 
+
 a = 0.2
 b = 0.2
 c = 0.08
@@ -280,13 +281,11 @@ def pick_Planet():
     print("you closely examine the list beacons your AI displays for you... ")
     time.sleep(a)
     print("##############################################################")
-    print("Ares: (1) 'Alpha Proxima'    # 105c       # Has 2 known planets...   ")
-    print("Ares: (2) 'HR3259'           # 41.04c     # Has 3 known planets      ")
-    print("Ares: (3) 'Epsillon_Eridani'  # 10.50c     # Has 1 known planet       ")
+    print("Ares: 'Alpha Proxima'    # 105c       # Has 2 known planets...   ")
+    print("Ares: 'HR3259'           # 41.04c     # Has 3 known planets      ")
+    print("Ares:'Epsillon_Eridani'  # 10.50c     # Has 1 known planet       ")
     print()
     getTime()
-    
-
     
     print("Path #1: Travel to 'Alpha Proxima'....")
     time.sleep(a)
@@ -300,6 +299,7 @@ def pick_Planet():
         go_to_Alpha_Proxima()
     elif pick_Planet_path == '2':
         #somefuntion
+
 
 def go_to_Alpha_Proxima():
     print('')
