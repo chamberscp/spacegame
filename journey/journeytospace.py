@@ -1,7 +1,7 @@
 import sys
 import time
 
-a = 0.8
+a = 0.2
 b = 0.2
 c = 0.08
 
@@ -58,14 +58,14 @@ def P1_Sec1():
     print("Path #3: Go down the right path *you sense it's warmer down this path, and yet your body goes cold when you look at it*...")
     time.sleep(a)
     print()
-    Path_p1s1 = input("Which path will you choose? (1/2/3): ")
-    if Path_p1s1 == '1':
+    Path_Planet1_path1 = input("Which path will you choose? (1/2/3): ")
+    if Path_Planet1_path1 == '1':
         print()
         path1()
-    elif Path_p1s1 == '2':
+    elif Path_Planet1_path1 == '2':
         print()
         path2()
-    elif Path_p1s1 == '3':
+    elif Path_Planet1_path1 == '3':
         print()
         path3()
 
@@ -149,22 +149,30 @@ def P1_Sec2():
     print("you think to yourself Alpha Centari is a Star not a planet, rather odd.......")
     time.sleep(a)
     print()
-    print("Path #1: Head to the SPACEPORT, Maybe if you are lucky there is a ship to escape this wasteland...*....")
+    print("Path #1: Head to the SPACEPORT, Maybe if you are lucky there is a ship to escape this wasteland......")
     time.sleep(a)
-    print("Path #2: Head to the supply store, maybe you can fin")
+    print("Path #2: Head to the supply store, maybe you can find supplies..")
     time.sleep(a)
-    print("Path #3: Head to the emergency shelter, maybe you can find some food and water and more importantly breathable *...")
+    print("Path #3: Head to the emergency shelter, maybe you can find some food and water and more importantly some o2 tanks to fill your reserves....")
     time.sleep(a)
-    secondpath = input("Which path will you choose? (1/2/3): ")
-    if secondpath == '1':
+    Planet1_path2 = input("Which path will you choose? (1/2/3): ")
+    if Planet1_path2 == '1':
         print()
         Sec2_path1()
-    elif secondpath == '2':
+    elif Planet1_path2 == '2':
         print()
         Sec2_path2()
-    elif secondpath == '3':
+    elif Planet1_path2 == '3':
         print()
         Sec2_path3()
+
+def Sec2_path2():
+    pass
+
+def Sec2_path3():
+    pass
+
+#================== Planet 1 Starport section ==========================       
 
 def Sec2_path1():
     print("You Decide the SPACEPORT is your best bet, you follow the signs..")
@@ -183,23 +191,25 @@ def Sec2_path1():
     time.sleep(a)
     print("AI: for a one time fee of <[2500]> Galactic Credits (all taxes and fees included) Bastion Port systems will automaticly refuel your ship and ensure you are flight <SYSTEM_CHECK_GREEN>!..")
     time.sleep(a)
-    print("you look at the display....")
+    print("you look at the display, feeling as this choice will have a lasting impact on you....")
     time.sleep(a)
-    print("Path #1: attempt to fill the fuel cells yourself (requires minimum 50 standard fuel units)....")
+    print("Path #1: Pay for the automated system to refuel the ship for you (requires 2500 credits minimum)....")
     time.sleep(a)
-    print("Path #2: Pay for the automated system to refuel the ship for you (requires 2500 credits minimum...")
+    print("Path #2: Attempt to reful the ship yourself (requires at least 50 standard units of fuel minimum)...")
     time.sleep(a)
-    thirdpath = input("Which path will you choose? (1/2/3): ")
-       # if Path_p1s1 == '1' and credits: > 2500 ===========================   Need to find a way to make the credit check conversion
-    if Sec2_path1_1 == ' 1 ':
+    print()
+    Planet1_path3 = input("Which path will you choose? (1/2): ")
+    print()
+    if Planet1_path3 == '1':
         print()
         Sec2_path1_1()
- 
-    
-    #else print("insufficient funds, PLEASE CHOOSE ANOTHER OPTION")
-    #elif Path_p1s == '2' and fuel > 50 
-    #    print()
-    #    Sec2_path2.1() #tbd
+    elif Planet1_path3 == '2':
+        print()
+        print("aint ready yet")
+    #elif print("insufficient Fuel, PLEASE CHOOSE ANOTHER OPTION")
+    #elif Path_p1s == '2' #and credits is  > 2500  ============= need to add in the credit check and conversion  
+    #     print()
+    #     Sec2_path2.1() #tbd
     #elif Path_p1s1 == '3':
     #    print()
     #    Sec2_path3.1() #tbd
@@ -224,15 +234,41 @@ def Sec2_path1_1():
     time.sleep(a)
     print("you look at the display....")
     time.sleep(a)
+    print()
+    question = '"You Sense as if a Important moment is upon you, almost as if a chapter of your life is about to unfold )"'
+    for character in question:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    time.sleep(b)
+    print()
     pick_Planet()
+    print()
 
+#============= Planet choice / warp travel section ================================ 
 
 def pick_Planet():
-    print
+    print()
+    print("Ship Sensors pick up several operational gates in system, but you don't recognize any of the names... ")
+    time.sleep(a)
+    print("The Nav computer does not have the data saved either, the realization hits your, you'll have to gamble your fuel and your life to make a jump to a random system that you don't even know will work ....")
+    time.sleep(a)    
 
 
 
-#=================== Main Function =========
+
+
+
+
+
+
+
+
+
+
+
+
+#=================== Main Menu / Start Game Function =========
 
 print()
 print()
