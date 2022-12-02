@@ -186,6 +186,7 @@ def P1_Sec2():
     time.sleep(a)
     print("Path #3: Head to the emergency shelter, maybe you can find some food and water and more importantly some o2 tanks to fill your reserves....")
     time.sleep(a)
+    print()
     
     while True:
         Planet1_path2 = input("Which path will you choose? (1/2/3): ")
@@ -305,7 +306,8 @@ def Sec2_path1():
     time.sleep(a)
     print("you look at the display, feeling as this choice will have a lasting impact on you....")
     time.sleep(a)
-    print("Path #1: Pay for the automated system to refuel the ship for you (requires 2500 credits minimum)....")
+    print()
+    print("Path #1: Pay for the automated system to refuel the ship for you (requires 2500 credits, in exchange for 50 units of fuel)....")
     time.sleep(a)
     print("Path #2: Attempt to reful the ship yourself (requires at least 50 standard units of fuel minimum)...")
     time.sleep(a)
@@ -316,7 +318,7 @@ def Sec2_path1():
         print()
         if Planet1_path3 == '1' and credits > 2500:
             credits = credits - 2500
-            #addFuel
+            fuel = fuel + 50
             print()
             Sec2_path1_1()
             break
@@ -335,14 +337,10 @@ def Sec2_path1():
             print("Invalid Input.")
 
 
-# this is where we will need either the fuel or the credit function checked and called
-# either one allowing player progress
 
-#================================= P1 STarport credits accepted path ====
+#================================= P1 STarport credits accepted path =========================
 
 def Sec2_path1_1():
-    global fuel
-    fuel = fuel + 50
     print("<PAYMENT RECIVED> TTHH--- THHHAA--- THANK YOU! payment accepted, Please enjoy some complimentary refreshments, courtesy of Bastion port! ")
     time.sleep(a)
     print("A nearby terminal opens a panel, sealed packages containing emergency water rations and food stuffs of questionable quality are presented, you take them greedily.")
@@ -365,6 +363,9 @@ def Sec2_path1_1():
         time.sleep(0.05)
     time.sleep(b)
     print()
+    displayStats()
+    print()
+    print()
     pick_Planet()
     print()
 
@@ -372,7 +373,8 @@ def Sec2_path1_1():
 #==============P1 Starport Fuel accepted path =======================
 def Sec2_path1_2():
     global fuel
-    print("put fuel in")
+    
+    print("you")
     time.sleep(a)
 
 
@@ -395,7 +397,9 @@ def pick_Planet():
     print("Ares: (3)  'HR3259'           # 41.04c Light years away      # Has 3 known planets      ")
     print("Ares: (4)  'LP 890-9'         #   105c Light years away      # Has 1 known planet       ")
     print("########################################################################################")
+    print()
     displayStats()
+    print()
     getTime()
     
     
