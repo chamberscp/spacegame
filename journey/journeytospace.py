@@ -73,16 +73,22 @@ def P1_Sec1():
     print("Path #3: Go down the right path *you sense it's warmer down this path, and yet your body goes cold when you look at it*...")
     time.sleep(a)
     print()
-    Path_Planet1_path1 = input("Which path will you choose? (1/2/3): ")
-    if Path_Planet1_path1 == '1':
-        print()
-        path1()
-    elif Path_Planet1_path1 == '2':
-        print()
-        path2()
-    elif Path_Planet1_path1 == '3':
-        print()
-        path3()
+    while True:
+        Path_Planet1_path1 = input("Which path will you choose? (1/2/3): ")
+        if Path_Planet1_path1 == '1':
+            print()
+            path1()
+            break           
+        elif Path_Planet1_path1 == '2':
+            print()
+            path2()
+            break    
+        elif Path_Planet1_path1 == '3':
+            print()
+            path3()
+            break
+        else:
+            print("Invalid Input.")
 
 
 #===============Planet one path 1: give player starting credits  ============
@@ -177,18 +183,24 @@ def P1_Sec2():
     time.sleep(a)
     print("Path #3: Head to the emergency shelter, maybe you can find some food and water and more importantly some o2 tanks to fill your reserves....")
     time.sleep(a)
-    Planet1_path2 = input("Which path will you choose? (1/2/3): ")
-    if Planet1_path2 == '1':
-        print()
-        Sec2_path1()
-    elif Planet1_path2 == '2':
-        print()
-        Sec2_path2()
-    elif Planet1_path2 == '3':
-        print()
-        Sec2_path3()
-
-
+    
+    while True:
+        Planet1_path2 = input("Which path will you choose? (1/2/3): ")
+        if Planet1_path2 == '1':
+            print()
+            Sec2_path1()
+            break
+        elif Planet1_path2 == '2':
+            print()
+            Sec2_path2()
+            break
+        elif Planet1_path2 == '3':
+            print()
+            Sec2_path3()
+            break
+        else:
+            print("Invalid Input.")
+ 
 #================= Planet 1: Supply store section (alows the player to convert fuel to credits or vise versa) ======================
 
 def Sec2_path2():
@@ -246,19 +258,29 @@ def Sec2_path1():
     print("Path #2: Attempt to reful the ship yourself (requires at least 50 standard units of fuel minimum)...")
     time.sleep(a)
     print()
-    Planet1_path3 = input("Which path will you choose? (1/2): ")
-    print()
-    if Planet1_path3 == '1' and credits > 2500:
-        credits = credits - 2500
+   
+    while True:
+        Planet1_path3 = input("Which path will you choose? (1/2): ")
         print()
-        Sec2_path1_1()
-    elif Planet1_path3 == 1 and credits < 2500:
-        print("Insufficient credits, please choose another option")
-        time.sleep(a)
-    elif Planet1_path3 == '2' and fuel > 50:
-        fuel = fuel - 50
-        print()
-        Sec2_path1_2
+        if Planet1_path3 == '1' and credits > 2500:
+            credits = credits - 2500
+            #addFuel
+            print()
+            Sec2_path1_1()
+            break
+        elif Planet1_path3 == '1' and credits < 2500:
+            print("Insufficient credits, please choose another option")
+            time.sleep(a)
+        elif Planet1_path3 == "2" and fuel > 50:
+            fuel = fuel - 50
+            print()
+            Sec2_path1_2
+            break
+        elif Planet1_path3 == "2" and fuel < 50:
+            print("Insufficient fuel, please choose another option")
+            time.sleep(a)
+        else:
+            print("Invalid Input.")
 
 
 # this is where we will need either the fuel or the credit function checked and called
