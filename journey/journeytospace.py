@@ -507,7 +507,13 @@ def getVelocity(): # Get V in m/s
               
 
 def go_to_Alpha_Proxima():
+    global fuel 
     ageCalc()
+    fuel = fuel - 6
+    print()
+    print()
+    print("You arrive at Alpha Proxima.")
+    displayStats()
     print(f'{age}')
     print("SETUP ALPHA PROXIMA STORY")
 
