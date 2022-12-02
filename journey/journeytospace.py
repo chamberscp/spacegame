@@ -231,8 +231,57 @@ def Sec2_path2():
 
 #================ Planet 1: Shelter section (kills the player) ============================
 def Sec2_path3():
-    pass
-
+    print("You Decide the SHELTER is your best bet, you follow the signs..")
+    time.sleep(a)
+    print("You begin walking down the street.  It looks like people left in a hurry and in a panic.  There is trash and abandoned vehicles everywhere. ")
+    time.sleep(a)
+    print("As you arrive a the shelter, you notice that it was once barricaded.  Now however, is an open hole coverd by a sheet, and it looks like the")
+    print("roof caved in at some point..")
+    time.sleep(a)
+    print("You make your way inside and find it empty.")
+    time.sleep(a)
+    print("It once must have housed a thousand people.  There are countless metal bunk beds strown about.")
+    time.sleep(a)
+    print("It looks like someone brought in some barrells to use as warming fires at some point.")
+    time.sleep(a)
+    print("You can't seem to find anything useful as you look around.  You make your way towards the back of the shelter.  Surely they must have had supplies in the back.")
+    time.sleep(a)
+    print("As you enter the back room, your eyes struggle to adjust to the darkness of this room.  You reach out to try and find a light switch even though you can tell there hasn;t been power here for a long time.  You tell yourself that old habits are...")
+    time.sleep(a)
+    print("....")
+    time.sleep(a)
+    print("....")
+    time.sleep(a)
+    print("....")
+    time.sleep(a)
+    print("You slowly fade into conciousness realizing that your head hurts profusely and that the back of your head feels wet..")
+    time.sleep(a)
+    print("Your wits start to trickle back and you realize that you can't move.")
+    time.sleep(a)
+    print("Your hands and feet are bound.  You realize that someone must have been hiding in the dark and struck you when you entered the room..")    
+    time.sleep(a)
+    print("Suddenly you feel hear a voice behind you.")
+    time.sleep(a)
+    print()
+    print("Hello.  What a fine day for a visiter.  It has been forever since someone showed up here.  Fortune has smiled upon me.")
+    time.sleep(a)
+    print()
+    print("You start to feel a sense of relief.  You can probably just get the man to let you go once you prove you are no threat.")
+    time.sleep(a)
+    print()
+    print("You are a welcome treat the man says as he clasps his hands with a smile. I had to raid the animal shelter weeks ago and I'm almost out of dog meat from the kennels.  You will make a tasty soup.")
+    time.sleep(a)
+    print()
+    print("Just as you are about to protest, the man grabs a hammer from a table and strikes you in the front of the head.")  
+    time.sleep(a)
+    print("Your mind races as everything begins to fade to black.")
+    print("##--- GAME OVER- Cause: exploration hazard ---##")
+    time.sleep(a)
+    print("##--- PLEASE RESET THE GAME TO TRY AGAIN   ---##")
+    time.sleep(a)
+    sys.exit 
+        
+     
 #================== Planet 1: Starport section best option, utilizes fuel or credits and leaves planet, go to travel section ==========================       
 
 def Sec2_path1():
@@ -456,17 +505,6 @@ def ageCalc():
          
 
     
-    
-
-
-
-    
-
-
-
-
-
-
 #=================== Main Menu / Start Game Function =========
 
 print()
@@ -474,7 +512,7 @@ print()
 print("     #############################")
 print("     |                           |")
 print("     |   Journey To Space  III   |")
-print("     |        test        , but a second time           |")
+print("     |                           |")
 print("     |                           |")
 print("     #############################")
 print()
