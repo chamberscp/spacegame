@@ -299,7 +299,9 @@ def pick_Planet():
     print("Ares: (3)  'HR3259'           # 41.04c     # Has 3 known planets        ")
     print("Ares: (4)  'LP 890-9'         #   105c       # Has 1 known planet       ")
     print("########################################################################")
+    displayStats()
     getTime()
+    
     
 def getTime():
     global v
@@ -395,6 +397,14 @@ def go_to_LP890():
 def ageCalc():
     global dayage 
     dayage = (age*365) + days
+    
+    
+def getFuel():
+    pass
+
+def displayStats():
+    print(f"///// Fuel = {fuel} units ///// Current Age = {age} ///// Credits = {credits} /////")
+    
     
 
 
