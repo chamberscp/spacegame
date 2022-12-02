@@ -1,6 +1,7 @@
 import sys
 import time
 
+
 AP = 'Alpha_Proxima'    
 EE = 'Epsillon_Eridani' 
 HR = 'HR3259'           
@@ -22,7 +23,7 @@ age = dayage/365
 credits = 0
 fuel = 0
 warpSpeed = 0 #tbd
-
+gameover = False
 
 
 #=============================================  Game paths and loops ====================================
@@ -523,6 +524,11 @@ def go_to_Alpha_Proxima():
     displayStats()
     print()
     print("This is where the rest of the story should be")
+    endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
+    if endstate == 'y':
+        P1_Sec1
+    
+    
 
 def go_to_wolf359():
     print('SETUP WOLF359 STORY')
@@ -575,6 +581,8 @@ time.sleep(a)
 print("## The journey will be hard, do you have what it takes?                      ##")
 time.sleep(a)
 print()
+
+
 
 while True:
     startGame = input("Would you like to start the game? (Y/N): ")
