@@ -307,6 +307,7 @@ def getTime():
     global v
     global mph
     global days
+   
     m = input('Where would you like to go? ')
     print(m)
     if m == '1':
@@ -316,6 +317,7 @@ def getTime():
         time = dist / mph
         days = time/24
         print(f'It will take {days} days to get to {AP}')
+        print(f'It will take 6 units of fuel to get to {AP}.  You currently have {fuel} units.')
         go_to_Alpha_Proxima()
     
     elif m == '2':
@@ -395,17 +397,17 @@ def go_to_LP890():
     
 
 #============= Player calculations ================================ 
+def displayStats():
+    print(f"///// Fuel = {fuel} units ///// Current Age = {age} ///// Credits = {credits} /////")
+
 
 def ageCalc():
     global dayage 
+    global age
+    global days
     dayage = (age*365) + days
-    
-    
-def getFuel():
-    pass
+         
 
-def displayStats():
-    print(f"///// Fuel = {fuel} units ///// Current Age = {age} ///// Credits = {credits} /////")
     
     
 
@@ -439,10 +441,16 @@ time.sleep(a)
 print("## The journey will be hard, do you have what it takes?                      ##")
 time.sleep(a)
 print()
-startGame = input("Would you like to start the game? (Y/N): ")
-if startGame == "n" or startGame == "N":
-    print("Maybe next time")
-    time.sleep(3)
-elif startGame == "y" or startGame == "Y":
-    print(f'You are : {age} years old.')
-    P1_Sec1()
+
+while True:
+    startGame = input("Would you like to start the game? (Y/N): ")
+    if startGame == "n" or startGame == "N":
+        print("Maybe next time")
+        time.sleep(3)
+        break
+    elif startGame == "y" or startGame == "Y":
+        displayStats()
+        P1_Sec1()
+        break
+    else:
+        print("Would you like to start the game? (Y/N): ")
