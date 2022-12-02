@@ -538,11 +538,11 @@ def displayStats():
 
 def ageCalc():
   global age
-    global dayage
-    global days
-    x = dayage + days
-    age = round(x/365,2)
-    return age
+  global dayage
+  global days
+  x = dayage + days
+  age = round(x/365,2)
+  return age
          
 
     
