@@ -33,7 +33,8 @@ warpSpeed = 0 #tbd
 def P1_Sec1():
     print()
     print("(## DEEP SPACE III but in text! ###)")
-    displayStats()
+    print("###  You must find your to way back to Earth, thinking carefully about your choices, aisde from worldy hazards, manage your resrouces to ensure survival ###")
+    print("###  The game will end if you run out of fuel, make poor choices, or if your charater's age goes above 65 years, Good luck out there!                    ###")
     time.sleep(a)
     print("You feel as if your body was tossed about like a ragdoll, you stuggle to bring even your basic senses into focus")
     time.sleep(a)
@@ -94,7 +95,9 @@ def path1():
     print("After the grizzly job of searching the bodies, you've collected 5000 Credits..maybe you'll find some use for these later....")
     time.sleep(a)
     credits = credits + 5000
-    print("Credits: 5000")
+    print()
+    displayStats()
+    print()
     time.sleep(a)
     print("nothing of value remains, you head back to where the cave splits....")
     time.sleep(a)
