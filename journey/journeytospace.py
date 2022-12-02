@@ -17,7 +17,7 @@ WF = 1
 
 days = 0
 dayage = 7300
-age = dayage/365
+age = round(dayage/365, 2)
 
 credits = 0
 fuel = 0
@@ -480,8 +480,13 @@ def getVelocity(): # Get V in m/s
               
 
 def go_to_Alpha_Proxima():
+    global fuel 
     ageCalc()
-    print(f'{age}')
+    fuel = fuel - 6
+    print()
+    print()
+    print("You arrive at Alpha Proxima.")
+    displayStats()
     print("SETUP ALPHA PROXIMA STORY")
 
 def go_to_wolf359():
@@ -503,11 +508,14 @@ def displayStats():
 
 
 def ageCalc():
-    global dayage 
     global age
+    global dayage
     global days
-    dayage = (age*365) + days
-         
+    x = dayage + days
+    age = round(x/365,2)
+    return age
+    
+   
 
     
 #=================== Main Menu / Start Game Function =========
