@@ -245,6 +245,8 @@ def Sec2_path1():
 #================================= P1 STarport credits accepted path ====
 
 def Sec2_path1_1():
+    global fuel
+    fuel = fuel + 50
     print("<PAYMENT RECIVED> TTHH--- THHHAA--- THANK YOU! payment accepted, Please enjoy some complimentary refreshments, courtesy of Bastion port! ")
     time.sleep(a)
     print("A nearby terminal opens a panel, sealed packages containing emergency water rations and food stuffs of questionable quality are presented, you take them greedily.")
@@ -314,6 +316,7 @@ def getTime():
         time = dist / mph
         days = time/24
         print(f'It will take {days} days to get to {AP}')
+        go_to_Alpha_Proxima()
     
     elif m == '2':
         dist = 6.1726*(10**13)
@@ -376,6 +379,7 @@ def getVelocity(): # Get V in m/s
 def go_to_Alpha_Proxima():
     ageCalc()
     print(f'{age}')
+    print("this should work")
 
 def go_to_worlf359():
     print('')
