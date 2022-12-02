@@ -355,7 +355,6 @@ def Sec2_path1():
             print("Invalid Input.")
 
 
-
 #================================= P1 STarport credits accepted path =========================
 
 def Sec2_path1_1():
@@ -435,42 +434,45 @@ def getTime():
     global v
     global mph
     global days
-   
-    m = input('Where would you like to go? ')
-    print(m)
-    if m == '1':
-        dist = 2.5219*(10**13)
-        print(f'{AP} is 4.29 light years away.')
-        getVelocity()
-        time = dist / mph
-        days = time/24
-        print(f'It will take {days} days to get to {AP}')
-        print(f'It will take 6 units of fuel to get to {AP}.  You currently have {fuel} units.')
-        go_to_Alpha_Proxima()
-    
-    elif m == '2':
-        dist = 6.1726*(10**13)
-        print(f'{EE} is 10.50 light years away.')
-        getVelocity()
-        time = dist / mph
-        days = time/24
-        print(f'It will take {days} days to get to {EE}')
-    
-    elif m == '3':
-        dist = 241259000000000
-        print(f'{HR} is 41.04 light years away.')
-        getVelocity()
-        time = dist / mph
-        days = time/24      
-        print(f'It will take {days} days to get to {HR}') 
-     
-    elif m == '4':
-        dist = 617300000000000
-        print(f'{LP} is 105 light years away.')
-        getVelocity()
-        time = dist / mph
-        days = time/24      
-        print(f'It will take {days} days to get to {LP}')
+    while True:
+        m = input('Where would you like to go? ')
+        print(m)
+        if m == '1':
+            dist = 2.5219*(10**13)
+            print(f'{AP} is 4.29 light years away.')
+            getVelocity()
+            time = dist / mph
+            days = time/24
+            print(f'It will take {days} days to get to {AP}')
+            print(f'It will take 6 units of fuel to get to {AP}.  You currently have {fuel} units.')
+            go_to_Alpha_Proxima()
+            break
+        elif m == '2':
+            dist = 6.1726*(10**13)
+            print(f'{EE} is 10.50 light years away.')
+            getVelocity()
+            time = dist / mph
+            days = time/24
+            print(f'It will take {days} days to get to {EE}')
+            break
+        elif m == '3':
+            dist = 241259000000000
+            print(f'{HR} is 41.04 light years away.')
+            getVelocity()
+            time = dist / mph
+            days = time/24      
+            print(f'It will take {days} days to get to {HR}') 
+            break
+        elif m == '4':
+            dist = 617300000000000
+            print(f'{LP} is 105 light years away.')
+            getVelocity()
+            time = dist / mph
+            days = time/24      
+            print(f'It will take {days} days to get to {LP}')
+            break
+        else:
+            print("Improper input")
 
 def getVelocity(): # Get V in m/s
     global v
