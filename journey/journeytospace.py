@@ -17,7 +17,7 @@ WF = 1
 
 days = 0
 dayage = 7300
-age = round(dayage/365, 2)
+age = dayage/365
 
 credits = 0
 fuel = 0
@@ -409,7 +409,6 @@ def Sec2_path1_2():
 
 
 
-
 #============= Planet choice / warp travel section ================================ 
 
 def pick_Planet():
@@ -508,13 +507,8 @@ def getVelocity(): # Get V in m/s
               
 
 def go_to_Alpha_Proxima():
-    global fuel 
     ageCalc()
-    fuel = fuel - 6
-    print()
-    print()
-    print("You arrive at Alpha Proxima.")
-    displayStats()
+    print(f'{age}')
     print("SETUP ALPHA PROXIMA STORY")
 
 def go_to_wolf359():
