@@ -391,7 +391,19 @@ def Sec2_path1_1():
 #==============P1 Starport Fuel accepted path =======================
 def Sec2_path1_2():
     global fuel   
-    print("Using a large portion of the crystals you have, you fill the fuel cells, ")
+    print("Using a large portion of the crystals you have, you fill the fuel cells,")
+    time.sleep(a)
+    print("After your finish fueling you notice several containers of ermgency water rations and food stuffs, you begin to scar,")
+    time.sleep(a)
+    print("After eating in the Sealed safty of the ship while the station prepared the ship, you take a moment to check the NAV computer and see only one destination point, a relay point in high orbit....")
+    time.sleep(a)
+    print("Worst case you think to yourself, you can try and scan again from orbit, you double check flight preperations.....")
+    time.sleep(a)
+    print("You take one last scan of the planet with the ships sensors, no signs of life, no settlements besides ruins and rubble....")
+    time.sleep(a)
+    print("Stories of devastated worlds in the outer colonies, had reached you before, but those were supposed to be only rumors.....")
+    time.sleep(a)
+    print("you look at the display....")
     time.sleep(a)
 
 
@@ -524,14 +536,11 @@ def displayStats():
 
 
 def ageCalc():
+    global dayage 
     global age
-    global dayage
     global days
-    x = dayage + days
-    age = round(x/365,2)
-    return age
-    
-   
+    dayage = (age*365) + days
+         
 
     
 #=================== Main Menu / Start Game Function =========
