@@ -233,6 +233,7 @@ def Sec2_path2():
 
 
 #================ Planet 1: Shelter section (kills the player) ============================
+# going to do some minor changes in keeping with the lifeless setting of the planet, perhaps cyborg or you open a sealed airlock
 def Sec2_path3():
     print("You Decide the SHELTER is your best bet, you follow the signs..")
     time.sleep(a)
@@ -263,16 +264,31 @@ def Sec2_path3():
     time.sleep(a)
     print("Your hands and feet are bound.  You realize that someone must have been hiding in the dark and struck you when you entered the room..")    
     time.sleep(a)
-    print("Suddenly you feel hear a voice behind you.")
+    print("Suddenly youy hear a voice behind you.")
     time.sleep(a)
     print()
     print("Hello.  What a fine day for a visiter.  It has been forever since someone showed up here.  Fortune has smiled upon me.")
+    question = "Hello.  What a fine day for a visiter.  It has been forever since someone showed up here.  Fortune has smiled upon me."
+    for character in question:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
     time.sleep(a)
     print()
     print("You start to feel a sense of relief.  You can probably just get the man to let you go once you prove you are no threat.")
+    question = '"You start to feel a sense of relief.  You can probably just get the man to let you go once you prove you are no threat.'
+    for character in question:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
     time.sleep(a)
     print()
     print("You are a welcome treat the man says as he clasps his hands with a smile. I had to raid the animal shelter weeks ago and I'm almost out of dog meat from the kennels.  You will make a tasty soup.")
+    question = '"You are a welcome treat the man says as he clasps his hands with a smile. I had to raid the animal shelter weeks ago and Im almost out of dog meat from the kennels.  You will make a tasty soup."'
+    for character in question: 
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
     time.sleep(a)
     print()
     print("Just as you are about to protest, the man grabs a hammer from a table and strikes you in the front of the head.")  
