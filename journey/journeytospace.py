@@ -293,12 +293,12 @@ def pick_Planet():
     time.sleep(a)    
     print("you closely examine the list beacons your AI displays for you... ")
     time.sleep(a)
-    print("######################################################################")
+    print("########################################################################")
     print("Ares: (1)  'Alpha Proxima'    #   4.2c       # Has 2 known planets...   ")
-    print("Ares: (2)  'Epsillon_Eridani' # 10.50c      # Has 1 known planet       ")
-    print("Ares: (3)  'HR3259'           # 41.04c     # Has 3 known planets      ")
+    print("Ares: (2)  'Epsillon_Eridani' # 10.50c      # Has 1 known planet        ")
+    print("Ares: (3)  'HR3259'           # 41.04c     # Has 3 known planets        ")
     print("Ares: (4)  'LP 890-9'         #   105c       # Has 1 known planet       ")
-    print("######################################################################")
+    print("########################################################################")
     getTime()
     
 def getTime():
