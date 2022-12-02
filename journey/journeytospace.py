@@ -36,6 +36,8 @@ def P1_Sec1():
     print("###  You must find your to way back to Earth, thinking carefully about your choices, aisde from worldy hazards, manage your resrouces to ensure survival ###")
     print("###  The game will end if you run out of fuel, make poor choices, or if your charater's age goes above 65 years, Good luck out there!                    ###")
     time.sleep(a)
+    print()
+    print()
     print("You feel as if your body was tossed about like a ragdoll, you stuggle to bring even your basic senses into focus")
     time.sleep(a)
     print("For a fraction of a second you feel an intense heat, and a flash blinds and disorents you even more then you were at first, and then like that, it passes...")
@@ -372,9 +374,8 @@ def Sec2_path1_1():
 
 #==============P1 Starport Fuel accepted path =======================
 def Sec2_path1_2():
-    global fuel
-    
-    print("you")
+    global fuel   
+    print("Using a large portion of the crystals you have, you fill the fuel cells, ")
     time.sleep(a)
 
 
@@ -539,7 +540,9 @@ while True:
         time.sleep(3)
         break
     elif startGame == "y" or startGame == "Y":
+        print()
         displayStats()
+        print
         P1_Sec1()
         break
     else:
