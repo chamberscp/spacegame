@@ -375,7 +375,7 @@ def Sec2_path1_1():
     print("you look at the display....")
     time.sleep(a)
     print()
-    question = '"You Sense as if a Important moment is upon you, almost as if a chapter of your life is about to unfold )"'
+    question = '"You Sense as if a Important moment is upon you, almost as if a chapter of your life is about to unfold "'
     for character in question:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -390,11 +390,10 @@ def Sec2_path1_1():
 
 
 #==============P1 Starport Fuel accepted path =======================
-def Sec2_path1_2():
-    global fuel   
+def Sec2_path1_2():   
     print("Using a large portion of the crystals you have, you fill the fuel cells,")
     time.sleep(a)
-    print("After your finish fueling you notice several containers of ermgency water rations and food stuffs, you begin to scar,")
+    print("After your finish fueling you notice several containers of ermgency water rations and food stuffs, you begin to scarf them down greedily..")
     time.sleep(a)
     print("After eating in the Sealed safty of the ship while the station prepared the ship, you take a moment to check the NAV computer and see only one destination point, a relay point in high orbit....")
     time.sleep(a)
@@ -431,6 +430,8 @@ def pick_Planet():
     displayStats()
     print()
     getTime()
+    print()
+
     
     
 def getTime():
@@ -520,7 +521,8 @@ def go_to_Alpha_Proxima():
     print("You arrive at Alpha Proxima.")
     print()
     displayStats()
-    print("SETUP ALPHA PROXIMA STORY")
+    print()
+    print("This is where the rest of the story should be")
 
 def go_to_wolf359():
     print('SETUP WOLF359 STORY')
@@ -549,21 +551,22 @@ def ageCalc():
   return age
          
 
-    
+ 
+
 #=================== Main Menu / Start Game Function =========
 
 print()
 print()
-print("     #############################")
-print("     |                           |")
-print("     |   Journey To Space  III   |")
-print("     |                           |")
-print("     |                           |")
-print("     #############################")
+print("                #############################                                  ")
+print("                |                           |                                  ")
+print("                |   Journey To Space  III   |                                  ")
+print("                |                           |                                  ")
+print("                |                           |                                  ")
+print("                #############################                                  ")
 print()
 print()
 time.sleep(a)
-print("##           -= Journey To Space III, but in TEXT!  =-                       ##")
+print("##           -= Journey To Space III  but in TEXT!  =-                       ##")
 time.sleep(a)
 print("## You awake in a crashed escape pod on a desolate world                     ##")
 time.sleep(a)
