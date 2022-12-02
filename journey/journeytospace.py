@@ -516,7 +516,6 @@ def go_to_Alpha_Proxima():
     print()
     print("You arrive at Alpha Proxima.")
     displayStats()
-    print(f'{age}')
     print("SETUP ALPHA PROXIMA STORY")
 
 def go_to_wolf359():
@@ -538,10 +537,12 @@ def displayStats():
 
 
 def ageCalc():
-    global dayage 
-    global age
+  global age
+    global dayage
     global days
-    dayage = (age*365) + days
+    x = dayage + days
+    age = round(x/365,2)
+    return age
          
 
     
