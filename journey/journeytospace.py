@@ -18,8 +18,9 @@ WF = 1
 credits = 0
 
 days = 0
-age = dayage/365
 dayage = 7300
+age = dayage/365
+
 
 fuel = 0
 warpSpeed = 0 #tbd
