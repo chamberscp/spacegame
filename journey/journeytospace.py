@@ -15,13 +15,11 @@ v = 0
 var1 = 1
 WF = 1
 
-credits = 0
-
 days = 0
 dayage = 7300
 age = dayage/365
 
-
+credits = 0
 fuel = 0
 warpSpeed = 0 #tbd
 
