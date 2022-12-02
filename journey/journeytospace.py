@@ -366,6 +366,8 @@ def Sec2_path1_1():
     time.sleep(a)
     print("Worst case you think to yourself, you can try and scan again from orbit, you double check flight preperations.....")
     time.sleep(a)
+    print("After taking a deep breath, you command your AI Zeus to launch the ship, 'Zeus take us up' *the ship engages Vtol mode, angles its accent, and fires the engines, you quickly accend to high orbit .....")
+    time.sleep(a)
     print("You take one last scan of the planet with the ships sensors, no signs of life, no settlements besides ruins and rubble....")
     time.sleep(a)
     print("Stories of devastated worlds in the outer colonies, had reached you before, but those were supposed to be only rumors.....")
@@ -404,6 +406,7 @@ def Sec2_path1_2():
     time.sleep(a)
     print("you look at the display....")
     time.sleep(a)
+    pick_Planet()
 
 
 
@@ -515,6 +518,7 @@ def go_to_Alpha_Proxima():
     print()
     print()
     print("You arrive at Alpha Proxima.")
+    print()
     displayStats()
     print("SETUP ALPHA PROXIMA STORY")
 
