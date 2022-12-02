@@ -33,6 +33,7 @@ warpSpeed = 0 #tbd
 def P1_Sec1():
     print()
     print("(## DEEP SPACE III but in text! ###)")
+    displayStats()
     time.sleep(a)
     print("You feel as if your body was tossed about like a ragdoll, you stuggle to bring even your basic senses into focus")
     time.sleep(a)
@@ -40,7 +41,7 @@ def P1_Sec1():
     time.sleep(a)
     print("After a few moments of shaking yourself and stuggling to stand, things slowly clear as you regain your bearing")
     time.sleep(a)
-    print("your display reads: NO BREATHABLE ATMOSPHERE DETECTED, NO SIGNS OF LIFE, EMERGENCY BEACON NON FUNCTIONAL")
+    print("your AI Apollo displays a message on your hud it reads: NO BREATHABLE ATMOSPHERE DETECTED, NO SIGNS OF LIFE, EMERGENCY BEACON NON FUNCTIONAL")
     time.sleep(a)
     print("You look around you, seemingly nothing but barren wastes....but wait")
     time.sleep(a)
@@ -133,7 +134,7 @@ def path3():
     time.sleep(a)
     print("You feel Darkness suddenly begin to envolpe you, your head swirls and you feel like the world itself is spinning around you....")
     time.sleep(a)
-    print("As you feel your eyes close for what you know is the last time, you see the display on your arm from your suits AI blares a warning but all too late.....")
+    print("As you feel your eyes close for what you know is the last time, you see the display on your arm from your suits AI Athena blares a warning but all too late.....")
     time.sleep(a)
     print("### ATHENA: INTENSE GAMMA RADIATION BURST DETECTED ###..")
     time.sleep(a)
@@ -188,7 +189,25 @@ def P1_Sec2():
 #================= Planet 1: Supply store section (alows the player to convert fuel to credits or vise versa) ======================
 
 def Sec2_path2():
-    print("you bla")
+    print("you decide the Supply store would be the best place to start")
+    time.sleep(a)
+    print("As you make your way through the streets, the erie silence becomes ever more present in your mind, you wonder what happened to his world, or how off course you could have gotten")
+    time.sleep(a)
+    print("After all, there were not supposed to be any human settled worlds on the hyper route you were taking, not at least until the very end when you reached Pinnacle station")
+    time.sleep(a)
+    print("A few minutes later you arrived at the store, all signs point to it being throughly emptied quite a while ago")
+    time.sleep(a)
+    print("Knowing how Important it is that you find supplies quickly, you check the store thoroughly, at the back you find a service droid covered in dust.. ")
+    time.sleep(a)
+    print("You press the activation screen and it flickers to life..")
+    time.sleep(a)
+    print("<CUSTOMER_LOGIN> GGG...GGRRRR...GRRRREEE....GREETINGS <CUSTOMER_ID STRING NOT FOUND> and welcome to <INSERT_COUNTRY_STYLE_WELCOME_STRING> RUSTY'S Supply..")
+    time.sleep(a)
+    print("you decide the Supply store would be the best place to start")
+    time.sleep(a)
+
+
+
 
 
 
@@ -293,12 +312,12 @@ def pick_Planet():
     time.sleep(a)    
     print("you closely examine the list beacons your AI displays for you... ")
     time.sleep(a)
-    print("########################################################################")
-    print("Ares: (1)  'Alpha Proxima'    #   4.2c       # Has 2 known planets...   ")
-    print("Ares: (2)  'Epsillon_Eridani' # 10.50c      # Has 1 known planet        ")
-    print("Ares: (3)  'HR3259'           # 41.04c     # Has 3 known planets        ")
-    print("Ares: (4)  'LP 890-9'         #   105c       # Has 1 known planet       ")
-    print("########################################################################")
+    print("########################################################################################")
+    print("Ares: (1)  'Alpha Proxima'    #   4.2c Light years away      # Has 2 known planets      ")
+    print("Ares: (2)  'Epsillon_Eridani' # 10.50c Light years away      # Has 1 known planet       ")
+    print("Ares: (3)  'HR3259'           # 41.04c Light years away      # Has 3 known planets      ")
+    print("Ares: (4)  'LP 890-9'         #   105c Light years away      # Has 1 known planet       ")
+    print("########################################################################################")
     displayStats()
     getTime()
     
@@ -381,10 +400,10 @@ def getVelocity(): # Get V in m/s
 def go_to_Alpha_Proxima():
     ageCalc()
     print(f'{age}')
-    print("this should work")
+    print("SETUP ALPHA PROXIMA STORY")
 
-def go_to_worlf359():
-    print('')
+def go_to_wolf359():
+    print('SETUP WOLF359 STORY')
 
 def go_to_Epsillon_Eridani():
     print('')
