@@ -213,6 +213,8 @@ def P1_Sec2():
 #================= Planet 1: Supply store section (alows the player to convert fuel to credits or vise versa) ======================
 
 def Sec2_path2():
+    global fuel
+    global credits
     print("you decide the Supply store would be the best place to start")
     time.sleep(a)
     print("As you make your way through the streets, the erie silence becomes ever more present in your mind, you wonder what happened to his world, or how off course you could have gotten")
@@ -227,8 +229,73 @@ def Sec2_path2():
     time.sleep(a)
     print("<CUSTOMER_LOGIN> GGG...GGRRRR...GRRRREEE....GREETINGS <CUSTOMER_ID STRING NOT FOUND> and welcome to <INSERT_COUNTRY_STYLE_WELCOME_STRING> RUSTY'S Supply..")
     time.sleep(a)
-    print("you decide the Supply store would be the best place to start")
+    print("Currently <ENTIRE_INVENTORY> Is out of stock and on back order, but our SAVE-ALOT barter system is still the best price in the sytem.. ")
     time.sleep(a)
+    print("You look down at the near by barter terminal.. ")
+    time.sleep(a)
+    print("Dilithum crystals: 1 unit for 50 Galactic credits or 50 Galactic credits for each unit of refined Dilithum fuel, no hidden taxes or fees! equal trade value both ways!")
+    time.sleep(a)
+    print("minimum trade in values set 2500 credits for 50 units of fuel, or 50 units of fuel for 2500 credits")
+    time.sleep(a)
+    print()
+    print("########################################################")
+    print("Option #1: Convert 2500 credits to 50 refined Dilithum fuel units")
+    time.sleep(a)
+    print("Option #2: Convert 50 Dilithum crystals to 2500 Credits")
+    time.sleep(a)
+    print("#########################################################")
+    print()
+    print("Option #3: you think to yourself, you could always just leave and head to the starport now")
+    time.sleep(a)
+    while True:
+        storeconvert = input("Which Option will you choose? (1/2/3): ")
+        if storeconvert == '1' and credits > 2500:
+            credits = credits -2500
+            fuel = fuel + 50
+            print()
+            print("Trade in accepted, processing")
+            time.sleep(a)
+            print()
+            time.sleep(a)
+            displayStats()
+            time.sleep(a)
+            print("You decide to take your newfound wealth to the Starport, hopefully you can make good use of it there...")
+            time.sleep(a)
+            print()
+            Sec2_path1()
+            time.sleep(a) 
+        elif storeconvert == '1' and credits < 2500:
+            print("Insufficient credits, please choose another option")           
+        elif storeconvert == '2' and fuel > 50:
+            credits = credits +2500
+            fuel = fuel -50
+            print()
+            print("Trade in accepted, processing")
+            print()
+            time.sleep(a)
+            displayStats()
+            time.sleep(a)
+            print()
+            print("You decide to take your newfound wealth to the Starport, hopefully you can make good use of it there...")
+            time.sleep(a)
+            print()
+            Sec2_path1()
+            time.sleep(a)
+            break
+        elif storeconvert == '2' and fuel < 50:
+            print("Insufficient fuel, please choose another option")
+            time.sleep(a)   
+        elif storeconvert == '3':
+            print()
+            print("you decide to head to the startport instead, maybe you can find some better options there...")
+            time.sleep(a)
+            print()
+            print()
+            Sec2_path1()
+            time.sleep(a)
+            break
+        else:
+            print("Invalid Input.")
 
 
 
@@ -320,7 +387,7 @@ def Sec2_path3():
 def Sec2_path1():
     global fuel
     global credits
-    print("You Decide the SPACEPORT is your best bet, you follow the signs..")
+    print("You make your way to the SPACEPORT, you follow the signs as the scilence gnaws at you..")
     time.sleep(a)
     print("after some time you come to the SPACEPORT, no signs of life, its erie and quiet, your AI reports even no microorganisms....")
     time.sleep(a)
@@ -332,9 +399,9 @@ def Sec2_path1():
     time.sleep(a)
     print("<CUSTOMER_LOGIN> GGG...GGRRRR...GRRRREEE....GREETINGS <CUSTOMER_ID STRING NOT FOUND> and welcome to Bastion Port, it looks like your ship is <READY> to fly!..")
     time.sleep(a)
-    print("the AI goes on: It seems your ship is lacking fuel, please ensure sufficient <MIN 50 STANDARD FUEL UNITS> dilithium has been placed in fuel storage cells....")
+    print("the Port AI goes on: It seems your ship is lacking fuel, please ensure sufficient <MIN 50 STANDARD FUEL UNITS> dilithium has been placed in fuel storage cells....")
     time.sleep(a)
-    print("AI: for a one time fee of <[2500]> Galactic Credits (all taxes and fees included) Bastion Port systems will automaticly refuel your ship and ensure you are flight <SYSTEM_CHECK_GREEN>!..")
+    print("Port AI: for a one time fee of <[2500]> Galactic Credits (all taxes and fees included) Bastion Port systems will automaticly refuel your ship and ensure you are flight <SYSTEM_CHECK_GREEN>!..")
     time.sleep(a)
     print("you look at the display, feeling as this choice will have a lasting impact on you....")
     time.sleep(a)
@@ -353,6 +420,7 @@ def Sec2_path1():
             fuel = fuel + 50
             print()
             Sec2_path1_1()
+            time.sleep(a)
             break
         elif Planet1_path3 == '1' and credits < 2500:
             print("Insufficient credits, please choose another option")
