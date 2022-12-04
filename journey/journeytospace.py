@@ -33,7 +33,7 @@ gameover = False
 #================================== PLANET 1 SECTION 1: Intro to starter planet ========================
 def P1_Sec1():
     print()
-    print("(## DEEP SPACE III but in text! ###)")
+    print("###                                               DEEP SPACE III but in text!                                                                            ###")
     print("###  You must find your to way back to Earth, thinking carefully about your choices, aisde from worldy hazards, manage your resrouces to ensure survival ###")
     print("###  The game will end if you run out of fuel, make poor choices, or if your charater's age goes above 65 years, Good luck out there!                    ###")
     time.sleep(a)
@@ -378,7 +378,7 @@ def Sec2_path1_1():
     print("you look at the display....")
     time.sleep(a)
     print()
-    question = '"You Sense as if a Important moment is upon you, almost as if a chapter of your life is about to unfold "'
+    question = '"You Sense as if a Important moment is upon you, as if this choice will determine your very fate"'
     for character in question:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -419,17 +419,23 @@ def pick_Planet():
     print()
     print("Ship Sensors pick up several operational gates in system, but you don't recognize any of the names... ")
     time.sleep(a)
-    print("The Nav computer does not have the data saved either, the realization hits your, you'll have to gamble your fuel and your life to make a jump to a random system that you don't even know will work ....")
-    time.sleep(a)    
+    print("The Nav computer does not have the data saved either, the realization hits your, you'll have to gamble your fuel and your life to make a jump to a random system that holds who knows what in store for you ....")
+    time.sleep(a) 
     print("you closely examine the list beacons your AI Ares displays for you... ")
     time.sleep(a)
     print("########################################################################################")
-    print("Ares: (1)  'Alpha Proxima'    #   4.2c Light years away      # Has 2 known planets      ")
-    print("Ares: (2)  'Epsillon_Eridani' # 10.50c Light years away      # Has 1 known planet       ")
-    print("Ares: (3)  'HR3259'           # 41.04c Light years away      # Has 3 known planets      ")
-    print("Ares: (4)  'LP 890-9'         #   105c Light years away      # Has 1 known planet       ")
+    print("Ares: (1)  'Alpha Proxima'    #   4.2c Light years away      # 2 planets detected       ")
+    print("Ares: (2)  'Epsillon_Eridani' # 10.50c Light years away      # 1 planet detected        ")
+    print("Ares: (3)  'HR3259'           # 41.04c Light years away      # 3 planets detected       ")
+    print("Ares: (4)  'LP 890-9'         #   105c Light years away      # 1 planet detected        ")
     print("########################################################################################")
     print()
+    print("You remind yourself any choice you make have dire consaquences, as travel between systems is not a simple matter, you must finely balance your fuel to warp speed ratio...")
+    time.sleep(a)
+    print("as you must put yourself in cyro for the journey but even cryo-sleep does not stop your body from aging...")
+    time.sleep(a)
+    print("These are anywhere from days to years of your life you will be commiting to, but you must also think about how even IF you will be able to find more fuel...")
+    time.sleep(a)
     displayStats()
     print()
     getTime()
@@ -461,6 +467,8 @@ def getTime():
             time = dist / mph
             days = time/24
             print(f'It will take {days} days to get to {EE}')
+            print(f'It will take 6 units of fuel to get to {EE}.  You currently have {fuel} units.')
+            go_to_Epsillon_Eridani()
             break
         elif m == '3':
             dist = 241259000000000
@@ -468,7 +476,9 @@ def getTime():
             getVelocity()
             time = dist / mph
             days = time/24      
-            print(f'It will take {days} days to get to {HR}') 
+            print(f'It will take {days} days to get to {HR}')
+            print(f'It will take 6 units of fuel to get to {HR}.  You currently have {fuel} units.')
+            go_to_HR3259()
             break
         elif m == '4':
             dist = 617300000000000
@@ -477,6 +487,8 @@ def getTime():
             time = dist / mph
             days = time/24      
             print(f'It will take {days} days to get to {LP}')
+            print(f'It will take 6 units of fuel to get to {LP}.  You currently have {fuel} units.')
+            go_to_LP890()
             break
         else:
             print("Improper input")
@@ -518,21 +530,41 @@ def getVelocity(): # Get V in m/s
 def go_to_Alpha_Proxima():
     global fuel 
     ageCalc()
-    fuel = fuel - 6
+    time.sleep(a)
     print()
+    print()
+    fuel = fuel - 6
+    print("After much thought, you lock in your choice, and prepare for warp jump and cryo-sleep.. ")
+    time.sleep(a)
+    print("Your AI Poseidon goes over final checks: all preperations complete, ready for jump on your command.. ")
+    time.sleep(a)
+    print("After a deep breath you punch the command into the console and lay down in your pod, as  you close your eyes you quell the racing thoughts.. ")
+    time.sleep(a)
+    print("Darkness decends and you dift into the sweet silence of sleep..... ")
+    time.sleep(a)
     print()
     print("You arrive at Alpha Proxima.")
+    time.sleep(a)
     print()
     displayStats()
+    time.sleep(a)
     print()
-    print("This is where the rest of the story should be")
-    endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
+    print()
+    print()
+    print("This is the end of the product demo, Future plans include up to 5 explorable planets, a planet map system allowing player movement (system almost ready) and mini games for resource gathering")
+    time.sleep(a)
+    print("As well as greater narrative complexity with each planet, hidden endings tied to a morality system based off player choices")
+    time.sleep(a)
+    print()
+    print()
+    endstate = input("Please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
     if endstate == "y" or endstate == "Y":
         print()
         displayStats()
         print
         P1_Sec1()
     if endstate == "n" or endstate == "N":
+        print()
         print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
         time.sleep(3)
         
@@ -541,14 +573,32 @@ def go_to_Alpha_Proxima():
 def go_to_wolf359():
     global fuel 
     ageCalc()
+    time.sleep(a)
+    print()
+    print()
     fuel = fuel - 6
+    print("After much thought, you lock in your choice, and prepare for warp jump and cryo-sleep.. ")
+    time.sleep(a)
+    print("Your AI Poseidon goes over final checks: all preperations complete, ready for jump on your command.. ")
+    time.sleep(a)
+    print("After a deep breath you punch the command into the console and lay down in your pod, as  you close your eyes you quell the racing thoughts.. ")
+    time.sleep(a)
+    print("Darkness decends and you dift into the sweet silence of sleep..... ")
+    time.sleep(a)
     print()
-    print()
-    print("You arrive at Alpha Proxima.")
+    print("You arrive at Wolf-359.")
     print()
     displayStats()
+    time.sleep(a)
     print()
-    print("This is where the rest of the story should be")
+    print()
+    print()
+    print("This is the end of the product demo, Future plans include up to 5 explorable planets, a planet map system allowing player movement (system almost ready) and mini games for resource gathering")
+    time.sleep(a)
+    print("As well as greater narrative complexity with each planet, hidden endings tied to a morality system based off player choices")
+    time.sleep(a)
+    print()
+    print()
     endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
     if endstate == "y" or endstate == "Y":
         print()
@@ -556,20 +606,39 @@ def go_to_wolf359():
         print
         P1_Sec1()
     elif endstate == "n" or endstate == "N":
+        print()
         print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
         time.sleep(3)
 
 def go_to_Epsillon_Eridani():
     global fuel 
     ageCalc()
+    time.sleep(a)
+    print()
+    print()
     fuel = fuel - 6
+    print("After much thought, you lock in your choice, and prepare for warp jump and cryo-sleep.. ")
+    time.sleep(a)
+    print("Your AI Poseidon goes over final checks: all preperations complete, ready for jump on your command.. ")
+    time.sleep(a)
+    print("After a deep breath you punch the command into the console and lay down in your pod, as  you close your eyes you quell the racing thoughts.. ")
+    time.sleep(a)
+    print("Darkness decends and you dift into the sweet silence of sleep..... ")
+    time.sleep(a)
     print()
-    print()
-    print("You arrive at Epsillon_Eridani.")
+    print("You arrive at Epsillon Eridani.")
     print()
     displayStats()
+    time.sleep(a)
     print()
-    print("This is where the rest of the story should be")
+    print()
+    print()
+    print("This is the end of the product demo, Future plans include up to 5 explorable planets, a planet map system allowing player movement (system almost ready) and mini games for resource gathering")
+    time.sleep(a)
+    print("As well as greater narrative complexity with each planet, hidden endings tied to a morality system based off player choices")
+    time.sleep(a)
+    print()
+    print()
     endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
     if endstate == "y" or endstate == "Y":
         print()
@@ -577,20 +646,39 @@ def go_to_Epsillon_Eridani():
         print
         P1_Sec1()
     elif endstate == "n" or endstate == "N":
+        print()
         print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
         time.sleep(3)
 
 def go_to_HR3259():
     global fuel 
     ageCalc()
-    fuel = fuel - 6
+    time.sleep(a)
     print()
+    print()
+    fuel = fuel - 6
+    print("After much thought, you lock in your choice, and prepare for warp jump and cryo-sleep.. ")
+    time.sleep(a)
+    print("Your AI Poseidon goes over final checks: all preperations complete, ready for jump on your command.. ")
+    time.sleep(a)
+    print("After a deep breath you punch the command into the console and lay down in your pod, as  you close your eyes you quell the racing thoughts.. ")
+    time.sleep(a)
+    print("Darkness decends and you dift into the sweet silence of sleep..... ")
+    time.sleep(a)
     print()
     print("You arrive at HR3259.")
     print()
     displayStats()
+    time.sleep(a)
     print()
-    print("This is where the rest of the story should be")
+    print()
+    print()
+    print("This is the end of the product demo, Future plans include up to 5 explorable planets, a planet map system allowing player movement (system almost ready) and mini games for resource gathering")
+    time.sleep(a)
+    print("As well as greater narrative complexity with each planet, hidden endings tied to a morality system based off player choices")
+    time.sleep(a)
+    print()
+    print()
     endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
     if endstate == "y" or endstate == "Y":
         print()
@@ -598,20 +686,39 @@ def go_to_HR3259():
         print
         P1_Sec1()
     elif endstate == "n" or endstate == "N":
+        print()
         print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
         time.sleep(3)
 
 def go_to_LP890():
     global fuel 
     ageCalc()
-    fuel = fuel - 6
+    time.sleep(a)
     print()
+    print()
+    fuel = fuel - 6
+    print("After much thought, you lock in your choice, and prepare for warp jump and cryo-sleep.. ")
+    time.sleep(a)
+    print("Your AI Poseidon goes over final checks: all preperations complete, ready for jump on your command.. ")
+    time.sleep(a)
+    print("After a deep breath you punch the command into the console and lay down in your pod, as  you close your eyes you quell the racing thoughts.. ")
+    time.sleep(a)
+    print("Darkness decends and you dift into the sweet silence of sleep..... ")
+    time.sleep(a)
     print()
     print("You arrive at LP890.")
     print()
     displayStats()
+    time.sleep(a)
     print()
-    print("This is where the rest of the story should be")
+    print()
+    print()
+    print("This is the end of the product demo, Future plans include up to 5 explorable planets, a planet map system allowing player movement (system almost ready) and mini games for resource gathering")
+    time.sleep(a)
+    print("As well as greater narrative complexity with each planet, hidden endings tied to a morality system based off player choices")
+    time.sleep(a)
+    print()
+    print()
     endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
     if endstate == "y" or endstate == "Y":
         print()
@@ -619,6 +726,7 @@ def go_to_LP890():
         print
         P1_Sec1()
     elif endstate == "n" or endstate == "N":
+        print()
         print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
         time.sleep(3)
     
@@ -643,13 +751,13 @@ def ageCalc():
 
 print()
 print()
-print("                #############################                                  ")
-print("                |                           |                                  ")
-print("                |   Journey To Space  III   |                                  ")
-print("                |                           |                                  ")
-print("                |                           |                                  ")
-print("                #############################                                  ")
-print()
+print("                  #############################                                  ")
+print("                  |                           |                                  ")
+print("                  |   Journey To Space  III   |                                  ")
+print("                  |                           |                                  ")
+print("                  |                           |                                  ")
+print("                  #############################                                  ")
+print("              By: Chris Chambers and Brandon Sample!                             ")                    
 print()
 time.sleep(a)
 print("##           -= Journey To Space III  but in TEXT!  =-                       ##")
