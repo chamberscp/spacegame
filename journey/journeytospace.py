@@ -236,24 +236,22 @@ def Sec2_path2():
 
 
 #================ Planet 1: Shelter section (kills the player) ============================
-# going to do some minor changes in keeping with the lifeless setting of the planet, perhaps cyborg or you open a sealed airlock
 def Sec2_path3():
     print("You Decide the SHELTER is your best bet, you follow the signs..")
     time.sleep(a)
     print("You begin walking down the street.  It looks like people left in a hurry and in a panic.  There is trash and abandoned vehicles everywhere. ")
     time.sleep(a)
-    print("As you arrive a the shelter, you notice that it was once barricaded.  Now however, is an open hole coverd by a sheet, and it looks like the")
-    print("roof caved in at some point..")
+    print("As you arrive a the shelter, you notice that it was once barricaded.  Now however, is an open hole coverd by a sheet, and it looks like the roof caved in at some point..")
     time.sleep(a)
     print("You make your way inside and find it empty.")
     time.sleep(a)
-    print("It once must have housed a thousand people.  There are countless metal bunk beds strown about.")
+    print("It once must have housed a thousand people,  There are countless metal bunk beds strown about.")
     time.sleep(a)
-    print("It looks like someone brought in some barrells to use as warming fires at some point.")
+    print("It looks like someone brought in some barrels to use as warming fires at some point.")
     time.sleep(a)
     print("You can't seem to find anything useful as you look around.  You make your way towards the back of the shelter.  Surely they must have had supplies in the back.")
     time.sleep(a)
-    print("As you enter the back room, your eyes struggle to adjust to the darkness of this room.  You reach out to try and find a light switch even though you can tell there hasn;t been power here for a long time.  You tell yourself that old habits are...")
+    print("As you enter the back room, your eyes struggle to adjust to the darkness of this room.  You reach out to try and find a light switch even though you can tell there hasn't been power here for a long time.  You tell yourself that old habits are...")
     time.sleep(a)
     print("....")
     time.sleep(a)
@@ -270,7 +268,6 @@ def Sec2_path3():
     print("Suddenly youy hear a voice behind you.")
     time.sleep(a)
     print()
-    print("Hello.  What a fine day for a visiter.  It has been forever since someone showed up here.  Fortune has smiled upon me.")
     question = "Hello.  What a fine day for a visiter.  It has been forever since someone showed up here.  Fortune has smiled upon me."
     for character in question:
         sys.stdout.write(character)
@@ -278,7 +275,6 @@ def Sec2_path3():
         time.sleep(0.05)
     time.sleep(a)
     print()
-    print("You start to feel a sense of relief.  You can probably just get the man to let you go once you prove you are no threat.")
     question = '"You start to feel a sense of relief.  You can probably just get the man to let you go once you prove you are no threat.'
     for character in question:
         sys.stdout.write(character)
@@ -286,17 +282,32 @@ def Sec2_path3():
         time.sleep(0.05)
     time.sleep(a)
     print()
-    print("You are a welcome treat the man says as he clasps his hands with a smile. I had to raid the animal shelter weeks ago and I'm almost out of dog meat from the kennels.  You will make a tasty soup.")
-    question = '"You are a welcome treat the man says as he clasps his hands with a smile. I had to raid the animal shelter weeks ago and Im almost out of dog meat from the kennels.  You will make a tasty soup."'
+    question = '"You are a welcome treat the man says as he clasps his hands with a smile. I have survived of nutri-packs for far too long, You will make a a fine meal..."'
     for character in question: 
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
     time.sleep(a)
     print()
-    print("Just as you are about to protest, the man grabs a hammer from a table and strikes you in the front of the head.")  
+    print("Just as you are about to protest, the owner of the voice comes into view, what at first seemed like a man, is in fact a hideous amalgamation of man and machine..")  
+    time.sleep(a)
+    print("Gleeming red eyes pierce your skull, a dark metal body only partially hidden by strips of dried and leathery skin, dried dark red blood splatters cover the cloth it drapes itself in,..")  
+    time.sleep(a)
+    print("some sort of pale imitation of a human being, pretending in its own cursed way to walk and act like at least a once human figure..")
+    time.sleep(a)
+    print("He reveals a hand with with a dozen small blades in place of fingers..")
+    time.sleep(a)
+    question = '"Let this final thought comfort you mortal, your death will be swift...."'
+    for character in question: 
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    time.sleep(a)
+    print("With a utterly efficient and swift strike, the monsters bladed hand is plunged right into your heart... ")
     time.sleep(a)
     print("Your mind races as everything begins to fade to black.")
+    print()
+    print()
     print("##--- GAME OVER- Cause: exploration hazard ---##")
     time.sleep(a)
     print("##--- PLEASE RESET THE GAME TO TRY AGAIN   ---##")
