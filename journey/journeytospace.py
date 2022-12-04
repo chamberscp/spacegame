@@ -7,7 +7,7 @@ EE = 'Epsillon_Eridani'
 HR = 'HR3259'           
 LP = 'LP 890-9'         
 
-a = 0.2
+a = 3.0
 b = 0.2
 c = 0.08
 light = 299792458
@@ -36,7 +36,6 @@ def P1_Sec1():
     print("###                                               DEEP SPACE III but in text!                                                                            ###")
     print("###  You must find your to way back to Earth, thinking carefully about your choices, aisde from worldy hazards, manage your resrouces to ensure survival ###")
     print("###  The game will end if you run out of fuel, make poor choices, or if your charater's age goes above 65 years, Good luck out there!                    ###")
-    time.sleep(a)
     print()
     print()
     print("You feel as if your body was tossed about like a ragdoll, you stuggle to bring even your basic senses into focus")
@@ -464,7 +463,6 @@ def Sec2_path1_1():
         time.sleep(0.05)
     time.sleep(b)
     print()
-    displayStats()
     print()
     print()
     pick_Planet()
@@ -511,7 +509,7 @@ def pick_Planet():
     print()
     print("You remind yourself any choice you make have dire consaquences, as travel between systems is not a simple matter, you must finely balance your fuel to warp speed ratio...")
     time.sleep(a)
-    print("as you must put yourself in cyro for the journey but even cryo-sleep does not stop your body from aging...")
+    print("as you must put yourself in cryo for the journey but even cryo-sleep does not stop your body from aging...")
     time.sleep(a)
     print("These are anywhere from days to years of your life you will be commiting to, but you must also think about how even IF you will be able to find more fuel...")
     time.sleep(a)
@@ -838,15 +836,10 @@ print("                  |                           |                          
 print("                  #############################                                  ")
 print("              By: Chris Chambers and Brandon Sample!                             ")                    
 print()
-time.sleep(a)
-print("##           -= Journey To Space III  but in TEXT!  =-                       ##")
-time.sleep(a)
-print("## You awake in a crashed escape pod on a desolate world                     ##")
-time.sleep(a)
-print("## Before you lies the daunting task of finding your way back to Earth       ##")
-time.sleep(a)
-print("## The journey will be hard, do you have what it takes?                      ##")
-time.sleep(a)
+print("##           -=  Journey To Space III  but in TEXT!  =-                            ##")
+print("##       You awake in a crashed escape pod on a desolate world                     ##")
+print("##       Before you lies the daunting task of finding your way back to Earth       ##")
+print("##       The journey will be hard, do you have what it takes?                      ##")
 print()
 
 
