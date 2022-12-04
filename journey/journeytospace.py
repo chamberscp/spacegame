@@ -174,11 +174,13 @@ def P1_Sec2():
     time.sleep(a)
     print("you see a street sign in galatic basic that reads...")
     time.sleep(a)
-    print("---Welcome to Bastion: last remaining city of Alpha Centari---")
-    print("---               SPACEPORT: 500m <==                      ---")
-    print("---               RUSTY'S SUPLLY: 200m ==>                 ---")
-    print("---               EMERGENCY SHELTER: 50m ^                 ---")
-    print("---               CITY POPULATION: ( 1 )                   ---")
+    print()
+    print("---  Welcome to Bastion: last remaining city of Alpha Centari  ---")
+    print("---                 SPACEPORT: 500m <==                        ---")
+    print("---                 RUSTY'S SUPLLY: 200m ==>                   ---")
+    print("---                 EMERGENCY SHELTER: 50m ^                   ---")
+    print("---                 CITY POPULATION: ( 1 )                     ---")
+    print()
     time.sleep(a)
     print("you think to yourself Alpha Centari is a Star not a planet, rather odd.......")
     time.sleep(a)
@@ -525,22 +527,100 @@ def go_to_Alpha_Proxima():
     print()
     print("This is where the rest of the story should be")
     endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
-    if endstate == 'y':
-        P1_Sec1
-    
+    if endstate == "y" or endstate == "Y":
+        print()
+        displayStats()
+        print
+        P1_Sec1()
+    if endstate == "n" or endstate == "N":
+        print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
+        time.sleep(3)
+        
     
 
 def go_to_wolf359():
-    print('SETUP WOLF359 STORY')
+    global fuel 
+    ageCalc()
+    fuel = fuel - 6
+    print()
+    print()
+    print("You arrive at Alpha Proxima.")
+    print()
+    displayStats()
+    print()
+    print("This is where the rest of the story should be")
+    endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
+    if endstate == "y" or endstate == "Y":
+        print()
+        displayStats()
+        print
+        P1_Sec1()
+    elif endstate == "n" or endstate == "N":
+        print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
+        time.sleep(3)
 
 def go_to_Epsillon_Eridani():
-    print('')
+    global fuel 
+    ageCalc()
+    fuel = fuel - 6
+    print()
+    print()
+    print("You arrive at Epsillon_Eridani.")
+    print()
+    displayStats()
+    print()
+    print("This is where the rest of the story should be")
+    endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
+    if endstate == "y" or endstate == "Y":
+        print()
+        displayStats()
+        print
+        P1_Sec1()
+    elif endstate == "n" or endstate == "N":
+        print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
+        time.sleep(3)
 
 def go_to_HR3259():
-    print('')
+    global fuel 
+    ageCalc()
+    fuel = fuel - 6
+    print()
+    print()
+    print("You arrive at HR3259.")
+    print()
+    displayStats()
+    print()
+    print("This is where the rest of the story should be")
+    endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
+    if endstate == "y" or endstate == "Y":
+        print()
+        displayStats()
+        print
+        P1_Sec1()
+    elif endstate == "n" or endstate == "N":
+        print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
+        time.sleep(3)
 
 def go_to_LP890():
-    print('')
+    global fuel 
+    ageCalc()
+    fuel = fuel - 6
+    print()
+    print()
+    print("You arrive at LP890.")
+    print()
+    displayStats()
+    print()
+    print("This is where the rest of the story should be")
+    endstate = input(" This is the end of the product demo, please come back next time so we can share more of the fun features our team has planned! Press Y to restart and N to exit the game.")
+    if endstate == "y" or endstate == "Y":
+        print()
+        displayStats()
+        print
+        P1_Sec1()
+    elif endstate == "n" or endstate == "N":
+        print("Thank you for Playing DEEP SPACE 3: by Brandon Sample and Chris Chambers!")
+        time.sleep(3)
     
 
 #============= Player calculations ================================ 
