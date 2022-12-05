@@ -7,7 +7,7 @@ EE = 'Epsillon_Eridani'
 HR = 'HR3259'           
 LP = 'LP 890-9'         
 
-a = 3.0
+a = 2.6
 b = 0.2
 c = 0.08
 light = 299792458
@@ -234,7 +234,7 @@ def Sec2_path2():
     time.sleep(a)
     print("Dilithum crystals: 1 unit for 50 Galactic credits or 50 Galactic credits for each unit of refined Dilithum fuel, no hidden taxes or fees! equal trade value both ways!")
     time.sleep(a)
-    print("minimum trade in values set 2500 credits for 50 units of fuel, or 50 units of fuel for 2500 credits")
+    print("minimum trade in values set 2500 credits for 50 units of fuel, or 50 units of fuel for 2500 credits, we even offer 10 unit of fuel and 500 credits on the house as a thank you for Trusting Rusty's supply")
     time.sleep(a)
     print()
     print("########################################################")
@@ -248,25 +248,26 @@ def Sec2_path2():
     time.sleep(a)
     while True:
         storeconvert = input("Which Option will you choose? (1/2/3): ")
-        if storeconvert == '1' and credits > 2500:
+        if storeconvert == '1' and credits >= 2500:
             credits = credits -2500
-            fuel = fuel + 50
+            fuel = fuel + 60
             print()
             print("Trade in accepted, processing")
             time.sleep(a)
             print()
             time.sleep(a)
             displayStats()
+            print()
             time.sleep(a)
-            print("You decide to take your newfound wealth to the Starport, hopefully you can make good use of it there...")
+            print("You decide to take your new found wealth to the Starport, hopefully you can make good use of it there...")
             time.sleep(a)
             print()
             Sec2_path1()
             time.sleep(a) 
-        elif storeconvert == '1' and credits < 2500:
+        elif storeconvert == '1' and credits <= 2500:
             print("Insufficient credits, please choose another option")           
-        elif storeconvert == '2' and fuel > 50:
-            credits = credits +2500
+        elif storeconvert == '2' and fuel >= 50:
+            credits = credits +3000
             fuel = fuel -50
             print()
             print("Trade in accepted, processing")
@@ -414,22 +415,22 @@ def Sec2_path1():
     while True:
         Planet1_path3 = input("Which path will you choose? (1/2): ")
         print()
-        if Planet1_path3 == '1' and credits > 2500:
+        if Planet1_path3 == '1' and credits >= 2500:
             credits = credits - 2500
             fuel = fuel + 50
             print()
             Sec2_path1_1()
             time.sleep(a)
             break
-        elif Planet1_path3 == '1' and credits < 2500:
+        elif Planet1_path3 == '1' and credits <= 2500:
             print("Insufficient credits, please choose another option")
             time.sleep(a)
-        elif Planet1_path3 == "2" and fuel > 50:
+        elif Planet1_path3 == "2" and fuel >= 50:
             fuel = fuel - 50
             print()
-            Sec2_path1_2
+            Sec2_path1_2()
             break
-        elif Planet1_path3 == "2" and fuel < 50:
+        elif Planet1_path3 == "2" and fuel <= 50:
             print("Insufficient fuel, please choose another option")
             time.sleep(a)
         else:
@@ -466,6 +467,7 @@ def Sec2_path1_1():
     print()
     print()
     pick_Planet()
+    time.sleep(b)
     print()
 
 
@@ -513,6 +515,7 @@ def pick_Planet():
     time.sleep(a)
     print("These are anywhere from days to years of your life you will be commiting to, but you must also think about how even IF you will be able to find more fuel...")
     time.sleep(a)
+    print()
     displayStats()
     print()
     getTime()
